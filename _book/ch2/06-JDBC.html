@@ -1,0 +1,1472 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>06-JDBC · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="06-JDBC_装饰者模式.html" />
+    
+    
+    <link rel="prev" href="05-数据库.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../ch1/">
+            
+                <a href="../ch1/">
+            
+                    
+                    第一部分：Java基础篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../ch1/01 Java语言概述.html">
+            
+                <a href="../ch1/01 Java语言概述.html">
+            
+                    
+                    01 Java语言概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../ch1/02 基本语法.html">
+            
+                <a href="../ch1/02 基本语法.html">
+            
+                    
+                    02 基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../ch1/03 面向对象编程.html">
+            
+                <a href="../ch1/03 面向对象编程.html">
+            
+                    
+                    03 面向对象编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../ch1/04 高级类特性1.html">
+            
+                <a href="../ch1/04 高级类特性1.html">
+            
+                    
+                    04 高级类特性1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../ch1/05 高级类特性2.html">
+            
+                <a href="../ch1/05 高级类特性2.html">
+            
+                    
+                    05 高级类特性2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../ch1/06 异常处理.html">
+            
+                <a href="../ch1/06 异常处理.html">
+            
+                    
+                    06 异常处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../ch1/07 Java集合.html">
+            
+                <a href="../ch1/07 Java集合.html">
+            
+                    
+                    07 Java集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../ch1/08 泛型.html">
+            
+                <a href="../ch1/08 泛型.html">
+            
+                    
+                    08 泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../ch1/09 枚举&注解.html">
+            
+                <a href="../ch1/09 枚举&注解.html">
+            
+                    
+                    09 枚举&注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../ch1/10 IO流.html">
+            
+                <a href="../ch1/10 IO流.html">
+            
+                    
+                    10 IO流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../ch1/11 多线程.html">
+            
+                <a href="../ch1/11 多线程.html">
+            
+                    
+                    11 多线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../ch1/12 Java常用类.html">
+            
+                <a href="../ch1/12 Java常用类.html">
+            
+                    
+                    12 Java常用类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../ch1/13 Java反射.html">
+            
+                <a href="../ch1/13 Java反射.html">
+            
+                    
+                    13 Java反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../ch1/14 网络编程.html">
+            
+                <a href="../ch1/14 网络编程.html">
+            
+                    
+                    14 网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../ch1/15 Java1.8.html">
+            
+                <a href="../ch1/15 Java1.8.html">
+            
+                    
+                    15 Java1.8(补充)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第二部分：JavaWeb阶段
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="01-HTML.html">
+            
+                <a href="01-HTML.html">
+            
+                    
+                    01-HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="02-CSS.html">
+            
+                <a href="02-CSS.html">
+            
+                    
+                    02-CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="03-JavaScript.html">
+            
+                <a href="03-JavaScript.html">
+            
+                    
+                    03-JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="04-JQuery.html">
+            
+                <a href="04-JQuery.html">
+            
+                    
+                    04-JQuery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="05-数据库.html">
+            
+                <a href="05-数据库.html">
+            
+                    
+                    05-数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.6" data-path="06-JDBC.html">
+            
+                <a href="06-JDBC.html">
+            
+                    
+                    06-JDBC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="06-JDBC_装饰者模式.html">
+            
+                <a href="06-JDBC_装饰者模式.html">
+            
+                    
+                    06-JDBC_装饰者模式(静态代理)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="07-XML&Tomcat.html">
+            
+                <a href="07-XML&Tomcat.html">
+            
+                    
+                    07-XML&Tomcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="07-XML&Tomcat_反射.html">
+            
+                <a href="07-XML&Tomcat_反射.html">
+            
+                    
+                    07-XML&Tomcat_反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="07-关于Eclipse配置及项目发布.html">
+            
+                <a href="07-关于Eclipse配置及项目发布.html">
+            
+                    
+                    07-关于Eclipse配置及项目发布(补充)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="08-Servlet.html">
+            
+                <a href="08-Servlet.html">
+            
+                    
+                    08-Servlet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="08-Servlet_HTTP详解.html">
+            
+                <a href="08-Servlet_HTTP详解.html">
+            
+                    
+                    08-Servlet_HTTP详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="09-cookie&session.html">
+            
+                <a href="09-cookie&session.html">
+            
+                    
+                    09-cookie&session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="10-jsp&el&jstl.html">
+            
+                <a href="10-jsp&el&jstl.html">
+            
+                    
+                    10-jsp&el&jstl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="11-事务&MVC&反射.html">
+            
+                <a href="11-事务&MVC&反射.html">
+            
+                    
+                    11-事务&MVC&反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="12-ajax&json&jQuery.html">
+            
+                <a href="12-ajax&json&jQuery.html">
+            
+                    
+                    12-ajax&json&jQuery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="13-listener&filter.html">
+            
+                <a href="13-listener&filter.html">
+            
+                    
+                    13-listener(监听器)&filter(过滤器)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="14-注解&类加载器&动态代理.html">
+            
+                <a href="14-注解&类加载器&动态代理.html">
+            
+                    
+                    14-注解&类加载器&动态代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../ch3/readme.html">
+            
+                <a href="../ch3/readme.html">
+            
+                    
+                    第三部分：JavaEE阶段
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../ch3/frame/readme.html">
+            
+                <a href="../ch3/frame/readme.html">
+            
+                    
+                    框架篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../ch3/frame/Spring学习笔记1.html">
+            
+                <a href="../ch3/frame/Spring学习笔记1.html">
+            
+                    
+                    Spring学习笔记1（IOC及XML方式&依赖注入）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../ch3/frame/Spring学习笔记2.html">
+            
+                <a href="../ch3/frame/Spring学习笔记2.html">
+            
+                    
+                    Spring学习笔记2（IOC注解方式&AOP）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../ch3/frame/Spring学习笔记3.html">
+            
+                <a href="../ch3/frame/Spring学习笔记3.html">
+            
+                    
+                    Spring学习笔记3（JDBC模板&事务管理）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../ch3/frame/Spring学习笔记4.html">
+            
+                <a href="../ch3/frame/Spring学习笔记4.html">
+            
+                    
+                    Spring学习笔记4（SSH三大框架整合，未完...）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../ch3/frame/Mybatis学习笔记1.html">
+            
+                <a href="../ch3/frame/Mybatis学习笔记1.html">
+            
+                    
+                    Mybatis学习笔记1（开发入门）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../ch3/frame/Mybatis学习笔记2.html">
+            
+                <a href="../ch3/frame/Mybatis学习笔记2.html">
+            
+                    
+                    Mybatis学习笔记2（映射&动态sql&关联查询&整合Spring）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../ch3/frame/Mybatis学习笔记3.html">
+            
+                <a href="../ch3/frame/Mybatis学习笔记3.html">
+            
+                    
+                    Mybatis学习笔记3 （逆向工程）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../ch3/frame/SpringMVC学习笔记1.html">
+            
+                <a href="../ch3/frame/SpringMVC学习笔记1.html">
+            
+                    
+                    SpringMVC学习笔记1（整合Mybatis&参数绑定）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../ch3/frame/SpringMVC学习笔记2.html">
+            
+                <a href="../ch3/frame/SpringMVC学习笔记2.html">
+            
+                    
+                    SpringMVC学习笔记2（高级参数绑定&Restful&拦截器）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >06-JDBC</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="1&#x3001;&#x4EC0;&#x4E48;&#x662F;-jdbc">1&#x3001;&#x4EC0;&#x4E48;&#x662F; JDBC</h3>
+<p><strong>jdbc&#xFF1A;  </strong>Java &#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;(Java Database Connectivity)&#xFF0C;&#x662F; Java &#x8BED;&#x8A00;&#x4E2D;&#x7528;&#x6765;&#x89C4;&#x8303;&#x5BA2;&#x6237;&#x7AEF;&#x7A0B;&#x5E8F;&#x5982;&#x4F55;&#x6765;&#x8BBF;&#x95EE;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x63A5;&#x53E3;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x8BF8;&#x5982;&#x67E5;&#x8BE2;&#x548C;&#x66F4;&#x65B0;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x6570;&#x636E;&#x7684;&#x65B9;&#x6CD5;&#x3002;JDBC &#x4E5F;&#x662F; Sun Microsystems&#x7684;&#x5546;&#x6807;&#x3002;JDBC &#x662F;&#x9762;&#x5411;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7684;&#x3002;</p>
+<p>java &#x64CD;&#x4F5C;&#x6570;&#x636E;&#x5E93;&#x3002;jdbc &#x662F; oracle &#x516C;&#x53F8;&#x6307;&#x5B9A;&#x7684;&#x4E00;&#x5957;&#x89C4;&#x8303;&#xFF08;&#x4E00;&#x5957;&#x63A5;&#x53E3;&#xFF09;</p>
+<p>&#x9A71;&#x52A8;&#xFF1A;jdbc &#x7684;&#x5B9E;&#x73B0;&#x7C7B;&#xFF0C;&#x7531;&#x6570;&#x636E;&#x5E93;&#x5382;&#x5546;&#x63D0;&#x4F9B;&#x3002;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x5957;&#x89C4;&#x8303;&#x64CD;&#x4F5C;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#x5E93;&#x4E86;(&#x591A;&#x6001;)</p>
+<p><strong>jdbc&#x4F5C;&#x7528;&#xFF1A;</strong> &#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;&#x3001;&#x53D1;&#x9001; sql &#x8BED;&#x53E5;&#x3001;&#x5904;&#x7406;&#x7ED3;&#x679C;....   </p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x67B6;&#x6784;&#x56FE;&#xFF0C;&#x5B83;&#x663E;&#x793A;&#x4E86;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#x7BA1;&#x7406;&#x5668;&#x76F8;&#x5BF9;&#x4E8E; JDBC &#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#x548C; Java &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x66F4;&#x591A;&#x5B66;&#x4E60;&#x53C2;&#x8003;&#xFF1A; <a href="http://wiki.jikexueyuan.com/project/jdbc" target="_blank">JDBC &#x6307;&#x5357;</a></p>
+<p><img src="http://p35l3ejfq.bkt.clouddn.com/18-5-8/93585493.jpg" alt=""></p>
+<h4 id="11-jdbc-&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;&#x2605;&#x2605;">1.1 jdbc &#x64CD;&#x4F5C;&#x6B65;&#x9AA4;&#x2605;&#x2605;</h4>
+<pre><code class="lang-xml">1.&#x6570;&#x636E;&#x5E93;&#x548C;&#x8868;
+2.&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x9879;&#x76EE;
+3.&#x5BFC;&#x5165;&#x9A71;&#x52A8;jar&#x5305;
+4.&#x7F16;&#x7801;:
+    &#x6CE8;&#x518C;&#x9A71;&#x52A8; 
+    &#x83B7;&#x53D6;&#x8FDE;&#x63A5;
+    &#x7F16;&#x5199;sql
+    &#x521B;&#x5EFA;&#x9884;&#x7F16;&#x8BD1;&#x7684;&#x8BED;&#x53E5;&#x6267;&#x884C;&#x8005;
+    &#x8BBE;&#x7F6E;&#x53C2;&#x6570;
+    &#x6267;&#x884C;sql
+    &#x5904;&#x7406;&#x7ED3;&#x679C;
+    &#x91CA;&#x653E;&#x8D44;&#x6E90;
+</code></pre>
+<p>&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;&#x5E93;&#x548C;&#x8868;&#xFF1A;</p>
+<pre><code class="lang-html">CREATE DATABASE day07;
+USE day07;    
+
+create table category(
+    cid varchar(20) primary key,
+    cname varchar(20)
+);
+
+insert into category values(&apos;c001&apos;,&apos;&#x7535;&#x5668;&apos;);
+insert into category values(&apos;c002&apos;,&apos;&#x670D;&#x9970;&apos;);
+insert into category values(&apos;c003&apos;,&apos;&#x5316;&#x5986;&#x54C1;&apos;);
+insert into category values(&apos;c004&apos;,&apos;&#x4E66;&#x7C4D;&apos;);
+</code></pre>
+<p>&#x6CE8;&#xFF1A;&#x2460; IDE&#x6253;&#x5F00;&#x4E4B;&#x540E;&#xFF1A;</p>
+<ol>
+<li>&#x4FEE;&#x6539;&#x5B57;&#x7B26;&#x96C6; <code>utf-8</code></li>
+<li>&#x65B0;&#x5EFA; java &#x9879;&#x76EE;</li>
+<li>&#x4F7F;&#x7528;&#x7684; jdk &#x4E3A;&#x81EA;&#x5DF1;&#x7684; jdk&#xFF0C;&#x4E0D;&#x7528;&#x4F7F;&#x7528;&#x5185;&#x7F6E; jdk</li>
+</ol>
+<p>&#x2461; &#x4F7F;&#x7528; <strong>junit &#x5355;&#x5143;&#x6D4B;&#x8BD5;</strong>&#xFF0C;&#x8981;&#x6C42;:</p>
+<ol>
+<li>&#x65B9;&#x6CD5;&#x662F;public void xxx(){}</li>
+<li>&#x5728;&#x65B9;&#x6CD5;&#x4E0A;&#x6DFB;&#x52A0; <code>@Test</code></li>
+<li>&#x5728; <code>@Test</code> &#x6309;&#x4E0B; ctrl+1(&#x5FEB;&#x901F;&#x9501;&#x5B9A;&#x9519;&#x8BEF;)</li>
+<li>&#x5728;&#x65B9;&#x6CD5;&#x4E0A;&#x53F3;&#x952E; <code>run as  --&gt;junit</code> &#x5C31;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x65B9;&#x6CD5;&#x4E86;.</li>
+</ol>
+<p>&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@Test</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">f2</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception</span>{
+    <span class="hljs-comment">//&#x6CE8;&#x518C;&#x9A71;&#x52A8;</span>
+    <span class="hljs-comment">//Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</span>
+    DriverManager.registerDriver(<span class="hljs-keyword">new</span> Driver());
+    <span class="hljs-comment">//&#x83B7;&#x53D6;&#x8FDE;&#x63A5;         ctrl+o &#x6574;&#x7406;&#x5305;</span>
+    Connection conn=DriverManager.getConnection(<span class="hljs-string">&quot;jdbc:mysql://localhost:3306/day07&quot;</span>, <span class="hljs-string">&quot;root&quot;</span>, <span class="hljs-string">&quot;1234&quot;</span>);
+    <span class="hljs-comment">//&#x7F16;&#x5199;sql</span>
+    String  sql=<span class="hljs-string">&quot;select * from category&quot;</span>;
+    <span class="hljs-comment">//&#x521B;&#x5EFA;&#x8BED;&#x53E5;&#x6267;&#x884C;&#x8005;</span>
+    PreparedStatement st=conn.prepareStatement(sql);
+    <span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x53C2;&#x6570;</span>
+
+    <span class="hljs-comment">//&#x6267;&#x884C;sql</span>
+    ResultSet rs=st.executeQuery();
+    <span class="hljs-comment">//&#x5904;&#x7406;&#x7ED3;&#x679C;</span>
+    <span class="hljs-keyword">while</span>(rs.next()){
+        System.out.println(rs.getString(<span class="hljs-string">&quot;cid&quot;</span>)+<span class="hljs-string">&quot;::&quot;</span>+rs.getString(<span class="hljs-string">&quot;cname&quot;</span>));
+    }
+    <span class="hljs-comment">//&#x91CA;&#x653E;&#x8D44;&#x6E90;.</span>
+    rs.close();
+    st.close();
+    conn.close();
+}
+</code></pre>
+<p>&#x4F46;&#x4EE5;&#x4E0A;&#x5199;&#x7684;&#x4EE3;&#x7801;&#x4E0D;&#x597D;&#xFF0C;&#x5176;&#x5B9E;&#x5F88;&#x591A;&#x5730;&#x65B9;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;<strong>&#x5C01;&#x88C5;</strong>&#x3002;</p>
+<p><strong><em>&#x5C01;&#x88C5;&#x2460;</em></strong>     &#x6BD4;&#x5982;&#x53EF;&#x4EE5;&#x5982;&#x4E0B;&#xFF1A;&#xFF08;PS&#xFF1A;&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x7684; jdbc &#x7684; api &#x8BB2;&#x89E3;&#xFF0C;&#x53EF;&#x77E5;&#x9053;&#xFF0C;&#x8FD9;&#x91CC;&#x91C7;&#x7528;<code>Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</code> &#x8BE5;&#x65B9;&#x5F0F;&#x6CE8;&#x518C;&#x9A71;&#x52A8;&#xFF0C;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x9A71;&#x52A8;&#x6CE8;&#x518C;&#x4E24;&#x6B21;&#xFF09;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JdbcUtils_</span> </span>{
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x8FDE;&#x63A5;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Connection <span class="hljs-title">getConnection</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> ClassNotFoundException, SQLException </span>{
+        <span class="hljs-comment">// &#x6CE8;&#x518C;&#x9A71;&#x52A8;   ctrl+shift+f&#x683C;&#x5F0F;&#x5316;&#x4EE3;&#x7801;</span>
+        Class.forName(<span class="hljs-string">&quot;com.mysql.jdbc.Driver&quot;</span>);
+        <span class="hljs-comment">// &#x83B7;&#x53D6;&#x8FDE;&#x63A5; ctrl+o &#x6574;&#x7406;&#x5305;</span>
+        Connection conn = DriverManager.getConnection(<span class="hljs-string">&quot;jdbc:mysql://localhost:3306/day07&quot;</span>, <span class="hljs-string">&quot;root&quot;</span>, <span class="hljs-string">&quot;1234&quot;</span>);
+        <span class="hljs-keyword">return</span> conn;
+    }
+    <span class="hljs-comment">/**
+     * &#x91CA;&#x653E;&#x8D44;&#x6E90;
+     * <span class="hljs-doctag">@param</span> conn &#x8FDE;&#x63A5;
+     * <span class="hljs-doctag">@param</span> st &#x8BED;&#x53E5;&#x6267;&#x884C;&#x8005;
+     * <span class="hljs-doctag">@param</span> rs &#x7ED3;&#x679C;&#x96C6;
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">closeResource</span><span class="hljs-params">(Connection conn, Statement st, ResultSet rs)</span> </span>{
+        closeResultSet(rs);
+        closeStatement(st);
+        closeConn(conn);
+    }
+    <span class="hljs-comment">/**
+     * &#x91CA;&#x653E;&#x8FDE;&#x63A5;
+     * <span class="hljs-doctag">@param</span> conn &#x8FDE;&#x63A5;
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">closeConn</span><span class="hljs-params">(Connection conn)</span></span>{
+        <span class="hljs-keyword">if</span>(conn!=<span class="hljs-keyword">null</span>){
+            <span class="hljs-keyword">try</span> {
+                conn.close();
+            } <span class="hljs-keyword">catch</span> (SQLException e) {
+                e.printStackTrace();
+            }
+            conn=<span class="hljs-keyword">null</span>;
+        }    
+    }    
+    <span class="hljs-comment">/**
+     * &#x91CA;&#x653E;&#x8BED;&#x53E5;&#x6267;&#x884C;&#x8005;
+     * <span class="hljs-doctag">@param</span> st &#x8BED;&#x53E5;&#x6267;&#x884C;&#x8005;
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">closeStatement</span><span class="hljs-params">(Statement st)</span></span>{
+        <span class="hljs-keyword">if</span>(st!=<span class="hljs-keyword">null</span>){
+            <span class="hljs-keyword">try</span> {
+                st.close();
+            } <span class="hljs-keyword">catch</span> (SQLException e) {
+                e.printStackTrace();
+            }
+            st=<span class="hljs-keyword">null</span>;
+        }
+    }
+    <span class="hljs-comment">/**
+     * &#x91CA;&#x653E;&#x7ED3;&#x679C;&#x96C6;
+     * <span class="hljs-doctag">@param</span> rs &#x7ED3;&#x679C;&#x96C6;
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">closeResultSet</span><span class="hljs-params">(ResultSet rs)</span></span>{
+        <span class="hljs-keyword">if</span>(rs!=<span class="hljs-keyword">null</span>){
+            <span class="hljs-keyword">try</span> {
+                rs.close();
+            } <span class="hljs-keyword">catch</span> (SQLException e) {
+                e.printStackTrace();
+            }
+            rs=<span class="hljs-keyword">null</span>;
+        }
+    }
+}
+</code></pre>
+<p>&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x4F7F;&#x7528;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-comment">//&#x63D2;&#x5165;&#x4E00;&#x6761;&#x6570;&#x636E;</span>
+<span class="hljs-meta">@Test</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">f3</span><span class="hljs-params">()</span></span>{
+    Connection conn=<span class="hljs-keyword">null</span>;
+    ResultSet rs=<span class="hljs-keyword">null</span>;
+    PreparedStatement st=<span class="hljs-keyword">null</span>;
+    <span class="hljs-keyword">try</span> {
+        <span class="hljs-comment">//&#x83B7;&#x53D6;&#x8FDE;&#x63A5;</span>
+        conn=JdbcUtils.getConnection();
+        <span class="hljs-comment">//&#x7F16;&#x5199;sql</span>
+        String sql=<span class="hljs-string">&quot;insert into  category values(?,?)&quot;</span>;
+        <span class="hljs-comment">//&#x83B7;&#x53D6;&#x8BED;&#x53E5;&#x6267;&#x884C;&#x8005;</span>
+        st=conn.prepareStatement(sql);
+        <span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x53C2;&#x6570;</span>
+        st.setString(<span class="hljs-number">1</span>, <span class="hljs-string">&quot;c006&quot;</span>);
+        st.setString(<span class="hljs-number">2</span>, <span class="hljs-string">&quot;&#x6237;&#x5916;&quot;</span>);
+        <span class="hljs-comment">//&#x6267;&#x884C;sql </span>
+        <span class="hljs-keyword">int</span> i=st.executeUpdate();
+        <span class="hljs-comment">//&#x5904;&#x7406;&#x7ED3;&#x679C;</span>
+        <span class="hljs-keyword">if</span>(i==<span class="hljs-number">1</span>){
+            System.out.println(<span class="hljs-string">&quot;success&quot;</span>);
+        }<span class="hljs-keyword">else</span>{
+            System.out.println(<span class="hljs-string">&quot;fail&quot;</span>);
+        }
+    } <span class="hljs-keyword">catch</span> (Exception e) {
+        e.printStackTrace();
+    } <span class="hljs-keyword">finally</span> {
+        <span class="hljs-comment">//&#x91CA;&#x653E;&#x8D44;&#x6E90;</span>
+        JdbcUtils.closeResource(conn, st, rs);
+    }
+}
+</code></pre>
+<p><strong><em>&#x5C01;&#x88C5;&#x2461;</em></strong>    &#x6BD4;&#x5982;&#x53EF;&#x4EE5;&#x5982;&#x4E0B;&#xFF1A;&#xFF08;PS&#xFF1A;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x8FD9;&#x91CC;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x5C01;&#x88C5;&#x2460;&#x65B9;&#x5F0F;&#x4E2D;&#x6570;&#x636E;&#x5E93;&#x7B49;&#x4FE1;&#x606F;&#x5199;&#x6B7B;&#xFF0C;&#x4F7F;&#x7528;&#x4E86;<code>ResourceBundle</code> &#x6765;&#x8BFB;&#x53D6;&#x914D;&#x7F6E;&#x6587;&#x4EF6; <code>jdbc.properties</code>&#x8BBE;&#x7F6E;&#x7684;&#x6570;&#x636E;&#x5E93;&#x7B49;&#x4FE1;&#x606F;&#xFF09;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JdbcUtils</span> </span>{
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String DRIVERCLASS;
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String URL;
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String USER;
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String PASSWORD;
+    <span class="hljs-keyword">static</span> {
+        <span class="hljs-comment">// &#x83B7;&#x53D6;ResourceBundle ctrl+2 l</span>
+        ResourceBundle bundle = ResourceBundle.getBundle(<span class="hljs-string">&quot;jdbc&quot;</span>);
+        <span class="hljs-comment">// &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x7684;&#x5185;&#x5BB9;</span>
+        DRIVERCLASS = bundle.getString(<span class="hljs-string">&quot;driverClass&quot;</span>);
+        URL = bundle.getString(<span class="hljs-string">&quot;url&quot;</span>);
+        USER = bundle.getString(<span class="hljs-string">&quot;user&quot;</span>);
+        PASSWORD = bundle.getString(<span class="hljs-string">&quot;password&quot;</span>);
+    }
+    <span class="hljs-keyword">static</span> {
+        <span class="hljs-comment">// &#x6CE8;&#x518C;&#x9A71;&#x52A8; ctrl+shift+f&#x683C;&#x5F0F;&#x5316;&#x4EE3;&#x7801;</span>
+        <span class="hljs-keyword">try</span> {
+            Class.forName(DRIVERCLASS);
+        } <span class="hljs-keyword">catch</span> (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x8FDE;&#x63A5;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Connection <span class="hljs-title">getConnection</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> SQLException </span>{
+        <span class="hljs-comment">// &#x83B7;&#x53D6;&#x8FDE;&#x63A5; ctrl+o &#x6574;&#x7406;&#x5305;</span>
+        <span class="hljs-keyword">return</span>  DriverManager.getConnection(URL, USER, PASSWORD);
+    }
+    <span class="hljs-comment">//</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">closeResource</span><span class="hljs-params">(Connection conn, Statement st, ResultSet rs)</span> </span>{
+        closeResultSet(rs);
+        closeStatement(st);
+        closeConn(conn);
+    }
+    <span class="hljs-comment">//&#x91CA;&#x653E;&#x8FDE;&#x63A5;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">closeConn</span><span class="hljs-params">(Connection conn)</span> </span>{
+        <span class="hljs-keyword">if</span> (conn != <span class="hljs-keyword">null</span>) {
+            <span class="hljs-keyword">try</span> {
+                conn.close();
+            } <span class="hljs-keyword">catch</span> (SQLException e) {
+                e.printStackTrace();
+            }
+            conn = <span class="hljs-keyword">null</span>;
+        }
+
+    }
+    <span class="hljs-comment">//&#x91CA;&#x653E;&#x8BED;&#x53E5;&#x6267;&#x884C;&#x8005;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">closeStatement</span><span class="hljs-params">(Statement st)</span> </span>{
+        <span class="hljs-keyword">if</span> (st != <span class="hljs-keyword">null</span>) {
+            <span class="hljs-keyword">try</span> {
+                st.close();
+            } <span class="hljs-keyword">catch</span> (SQLException e) {
+                e.printStackTrace();
+            }
+            st = <span class="hljs-keyword">null</span>;
+        }
+
+    }
+    <span class="hljs-comment">//&#x91CA;&#x653E;&#x7ED3;&#x679C;&#x96C6;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">closeResultSet</span><span class="hljs-params">(ResultSet rs)</span> </span>{
+        <span class="hljs-keyword">if</span> (rs != <span class="hljs-keyword">null</span>) {
+            <span class="hljs-keyword">try</span> {
+                rs.close();
+            } <span class="hljs-keyword">catch</span> (SQLException e) {
+                e.printStackTrace();
+            }
+            rs = <span class="hljs-keyword">null</span>;
+        }
+    }
+}
+</code></pre>
+<p>&#x5176;&#x4E2D;<code>jdbc.properties</code> &#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-xml">driverClass=com.mysql.jdbc.Driver
+url=jdbc:mysql://localhost:3306/day07
+user=root
+password=1234
+</code></pre>
+<p>//////////    &#x5907;&#x6CE8;  ////////////////////////</p>
+<p>&#x5E38;&#x89C1;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#xFF1A;</p>
+<ol>
+<li>properties &#x6587;&#x4EF6;&#xFF0C;&#x91CC;&#x9762;&#x5185;&#x5BB9;&#x7684;&#x683C;&#x5F0F; <code>key=value</code></li>
+<li>xml &#x6587;&#x4EF6;</li>
+</ol>
+<p>&#x82E5;&#x6211;&#x4EEC;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E3A; properties&#xFF0C;&#x5E76;&#x4E14;&#x653E;&#x5728; src &#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; ResourceBundle &#x5DE5;&#x5177;&#x5FEB;&#x901F;&#x83B7;&#x53D6;&#x91CC;&#x9762;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x3002;&#x4F7F;&#x7528;&#x6B65;&#x9AA4;&#xFF1A;&#xFF08;&#x5C01;&#x88C5;&#x2461;&#x65B9;&#x5F0F;&#x7684;&#x4EE3;&#x7801;&#x6709;&#xFF09;</p>
+<ol>
+<li>&#x83B7;&#x53D6; ResourceBundle &#x5BF9;&#x8C61;:  <code>static ResourceBundle getBundle(&quot;&#x6587;&#x4EF6;&#x540D;&#x79F0;&#x4E0D;&#x5E26;&#x540E;&#x7F00;&#x540D;&quot;)</code></li>
+<li>&#x901A;&#x8FC7; ResourceBundle &#x5BF9;&#x8C61;&#x83B7;&#x53D6;&#x914D;&#x7F6E;&#x4FE1;&#x606F;: <code>String getString(String key)</code> &#x901A;&#x8FC7;&#x6267;&#x884C;key&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x7684;value</li>
+</ol>
+<h4 id="12-jdbc-api-&#x8BE6;&#x89E3;">1.2 jdbc-api &#x8BE6;&#x89E3;</h4>
+<p>&#x6240;&#x6709;&#x7684;&#x5305;&#xFF0C;&#x90FD;&#x662F; <code>java.sql</code> &#x6216;&#x8005; <code>javax.sql</code></p>
+<p><strong>1.2.1 DriverManager</strong>&#xFF1A;&#x7BA1;&#x7406;&#x4E86;&#x4E00;&#x7EC4; jdbc &#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x7C7B;</p>
+<p><strong><em>&#x5E38;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;</em></strong></p>
+<p>1&#x3001;&#x6CE8;&#x518C;&#x9A71;&#x52A8;&#xFF08;&#x4E86;&#x89E3;&#xFF09;&#xFF1A;<code>static void registerDriver(Driver driver)</code> &#xFF0C;&#x901A;&#x8FC7;&#x67E5;&#x770B; <code>com.mysql.jdbc.Driver</code> &#x7684;&#x6E90;&#x7801; &#x6709;&#x5982;&#x4E0B;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">static</span> {
+    <span class="hljs-keyword">try</span> {
+        java.sql.DriverManager.registerDriver(<span class="hljs-keyword">new</span> Driver());
+    } <span class="hljs-keyword">catch</span> (SQLException E) {
+        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> RuntimeException(<span class="hljs-string">&quot;Can&apos;t register driver!&quot;</span>);
+    }
+}
+</code></pre>
+<p>PS&#xFF1A;&#x5176;&#x4E2D; <code>java.sql.DriverManager.registerDriver(new Driver());</code>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x6211;&#x4EEC;&#x5176;&#x5B9E;&#x5DF2;&#x7ECF;&#x5199;&#x8FC7;&#x3002;</p>
+<p>&#x9A71;&#x52A8;&#x6CE8;&#x518C;&#x4E86;&#x4E24;&#x6B21;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x5C06;&#x9759;&#x6001;&#x4EE3;&#x7801;&#x5757;&#x6267;&#x884C;&#x4E00;&#x6B21;&#xFF0C;&#x7C7B;&#x88AB;&#x52A0;&#x8F7D;&#x5230;&#x5185;&#x5B58;&#x4E2D;&#x4F1A;&#x6267;&#x884C;&#x9759;&#x6001;&#x4EE3;&#x7801;&#x5757;&#xFF0C;&#x5E76;&#x4E14;&#x53EA;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x3002;&#x73B0;&#x5728;&#x53EA;&#x9700;&#x8981;&#x5C06;&#x7C7B;&#x52A0;&#x8F7D;&#x5230;&#x5185;&#x5B58;&#x4E2D;&#x5373;&#x53EF;&#xFF1A;</p>
+<ul>
+<li>&#x65B9;&#x5F0F;1&#x2605;&#xFF1A;<code>Class.forName(&quot;&#x5168;&#x9650;&#x5B9A;&#x540D;&quot;);//&#x5305;&#x540D;+&#x7C7B;&#x540D;   com.mysql.jdbc.Driver</code></li>
+<li>&#x65B9;&#x5F0F;2&#xFF1A;<code>&#x7C7B;&#x540D;.class;</code></li>
+<li>&#x65B9;&#x5F0F;3&#xFF1A;<code>&#x5BF9;&#x8C61;.getClass();</code></li>
+</ul>
+<p>2&#x3001;&#x83B7;&#x53D6;&#x8FDE;&#x63A5;&#xFF08;&#x638C;&#x63E1;&#xFF09;&#xFF1A;<code>static Connection getConnection(String url, String user, String password)</code></p>
+<p>&#x53C2;&#x6570;1: &#x544A;&#x8BC9;&#x6211;&#x4EEC;&#x8FDE;&#x63A5;&#x4EC0;&#x4E48;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x5E93;&#x53CA;&#x8FDE;&#x63A5;&#x90A3;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x683C;&#x5F0F; <code>&#x534F;&#x8BAE;:&#x6570;&#x636E;&#x5E93;&#x7C7B;&#x578B;:&#x5B50;&#x534F;&#x8BAE; &#x53C2;&#x6570;</code></p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<ul>
+<li>mysql&#xFF1A;<code>jdbc:mysql://localhost:3306/&#x6570;&#x636E;&#x5E93;&#x540D;&#x79F0;</code></li>
+<li>oracle&#xFF1A;<code>jdbc:oracle:thin@localhost:1521@&#x5B9E;&#x4F8B;</code></li>
+</ul>
+<p>&#x53C2;&#x6570;2: &#x8D26;&#x6237;&#x540D; root</p>
+<p>&#x53C2;&#x6570;3: &#x5BC6;&#x7801;</p>
+<p><strong>1.2.2 Driver: java.sql</strong> &#xFF08;&#x4E86;&#x89E3;&#xFF09;</p>
+<p><strong>Connection: &#x8FDE;&#x63A5;&#xFF1B;&#x63A5;&#x53E3;</strong></p>
+<p>&#x5E38;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<p>&#x83B7;&#x53D6;&#x8BED;&#x53E5;&#x6267;&#x884C;&#x8005;&#xFF1A;</p>
+<ul>
+<li>(&#x4E86;&#x89E3;)<code>Statement createStatement()</code> : &#x83B7;&#x53D6;&#x666E;&#x901A;&#x7684;&#x8BED;&#x53E5;&#x6267;&#x884C;&#x8005;&#xFF1B;&#x4F1A;&#x51FA;&#x73B0; sql &#x6CE8;&#x5165;&#x95EE;&#x9898;&#xFF08;<a href="https://baike.baidu.com/item/SQL%E6%B3%A8%E5%85%A5" target="_blank">sql&#x6CE8;&#x5165;</a>&#xFF09;</li>
+<li><code>PreparedStatement prepareStatement(String sql)</code> &#xFF1A;&#x83B7;&#x53D6;&#x9884;&#x7F16;&#x8BD1;&#x8BED;&#x53E5;&#x6267;&#x884C;&#x8005;</li>
+<li>(&#x4E86;&#x89E3;)<code>CallableStatement prepareCall(String sql)</code>&#xFF1A;&#x83B7;&#x53D6;&#x8C03;&#x7528;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x7684;&#x8BED;&#x53E5;&#x6267;&#x884C;&#x8005;</li>
+</ul>
+<p>&#x4E86;&#x89E3;&#xFF1A;</p>
+<ul>
+<li><code>setAutoCommit(false)</code>: &#x624B;&#x52A8;&#x5F00;&#x542F;&#x4E8B;&#x52A1;</li>
+<li><code>commit()</code>: &#x63D0;&#x4EA4;&#x4E8B;&#x52A1;</li>
+<li><code>rollback()</code>: &#x4E8B;&#x52A1;&#x56DE;&#x6EDA;</li>
+</ul>
+<p><strong>Statement: &#x8BED;&#x53E5;&#x6267;&#x884C;&#x8005;&#xFF1B;&#x63A5;&#x53E3;</strong></p>
+<p><strong>PreparedStatement: &#x9884;&#x7F16;&#x8BD1;&#x8BED;&#x53E5;&#x6267;&#x884C;&#x8005;&#xFF1B;&#x63A5;&#x53E3;</strong></p>
+<p>&#x5E38;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<p>&#x200B;    &#x8BBE;&#x7F6E;&#x53C2;&#x6570;&#xFF1A;<code>setXxx</code> (int &#x7B2C;&#x51E0;&#x4E2A;&#x95EE;&#x53F7;,Object &#x5B9E;&#x9645;&#x53C2;&#x6570;);  &#x5E38;&#x89C1;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;<code>setInt</code>&#x3001;<code>setString</code>&#x3001;<code>setObject</code></p>
+<p>&#x200B;    &#x6267;&#x884C; sql&#xFF1A;&#x2460; <code>ResultSet executeQuery() &#xFF1A;&#x6267;&#x884C; r &#x8BED;&#x53E5; &#x8FD4;&#x56DE;&#x503C;:&#x7ED3;&#x679C;&#x96C6; &#x2461;</code>int executeUpdate()`&#xFF1A;&#x6267;&#x884C;cud &#x8BED;&#x53E5; &#x8FD4;&#x56DE;&#x503C;:&#x5F71;&#x54CD;&#x7684;&#x884C;&#x6570;</p>
+<p><strong>ResultSet: &#x7ED3;&#x679C;&#x96C6;&#xFF1B;&#x63A5;&#x53E3;</strong></p>
+<blockquote>
+<p>&#x6267;&#x884C;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x4E4B;&#x540E;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+</blockquote>
+<p>&#x5E38;&#x89C1;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<ul>
+<li><code>boolean next()</code>&#xFF1A;&#x5224;&#x65AD;&#x662F;&#x5426;&#x6709;&#x4E0B;&#x4E00;&#x6761;&#x8BB0;&#x5F55;,&#x82E5;&#x6709;&#x8FD4;&#x56DE;true&#x4E14;&#x5C06;&#x5149;&#x6807;&#x79FB;&#x5230;&#x4E0B;&#x4E00;&#x884C;,&#x82E5;&#x6CA1;&#x6709;&#x5462;&#x5219;&#x8FD4;&#x56DE;false&#x3002;&#x5149;&#x6807;&#x4E00;&#x5F00;&#x59CB;&#x5904;&#x4E8E;&#x7B2C;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x7684;&#x4E0A;&#x9762;&#x3002;</li>
+<li>&#x83B7;&#x53D6;&#x5177;&#x4F53;&#x5185;&#x5BB9;&#xFF1A;<code>getXxx(int&#x6216;string)</code> &#x82E5;&#x53C2;&#x6570;&#x4E3A;int :&#x7B2C;&#x51E0;&#x5217;&#xFF1B;&#x82E5;&#x53C2;&#x6570;&#x4E3A;string: &#x5217;&#x540D;(&#x5B57;&#x6BB5;&#x540D;)&#x3002;&#x4F8B;&#x5982;&#x83B7;&#x53D6;cname&#x7684;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>getString(2)</code> &#x6216; <code>getString(&quot;cname&quot;)</code>&#x65B9;&#x6CD5;&#x3002; &#x5E38;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;<code>geeInt</code>&#x3001;<code>getString</code> &#x4E5F;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;int&#x503C;&#x3001;<code>getObject</code>&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x4EFB;&#x610F;</li>
+</ul>
+<h4 id="13-&#x8FDE;&#x63A5;&#x6C60;">1.3 &#x8FDE;&#x63A5;&#x6C60;</h4>
+<p>&#x6211;&#x4EEC;&#x5728;&#x4F7F;&#x7528; jdbc &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6BCF;&#x64CD;&#x4F5C;&#x4E00;&#x6B21;&#xFF0C;&#x90FD;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x8FDE;&#x63A5;(&#x521B;&#x5EFA;)&#xFF0C;&#x7528;&#x5B8C;&#x4E4B;&#x540E;&#x628A;&#x8FDE;&#x63A5;&#x91CA;&#x653E;&#x6389;&#x4E86;(&#x9500;&#x6BC1;)&#x3002;&#x8FD9;&#x6837;&#x80AF;&#x5B9A;&#x4E0D;&#x884C;&#xFF0C;&#x5047;&#x8BBE;&#x7F51;&#x7AD9;&#x4E00;&#x5929;10&#x4E07;&#x8BBF;&#x95EE;&#x91CF;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#x5C31;&#x9700;&#x8981;&#x521B;&#x5EFA;10&#x4E07;&#x6B21;&#x8FDE;&#x63A5;&#xFF0C;&#x6781;&#x5927;&#x7684;&#x6D6A;&#x8D39;&#x6570;&#x636E;&#x5E93;&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x5E76;&#x4E14;&#x6781;&#x6613;&#x9020;&#x6210;&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#x5185;&#x5B58;&#x6EA2;&#x51FA;&#x3001;&#x62D3;&#x673A;&#x3002;&#xFF08;&#x6458;&#x81EA;&#x7F51;&#x4E0A;&#xFF09;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<strong>&#x8FDE;&#x63A5;&#x6C60;</strong>&#x6765;&#x4F18;&#x5316; jdbc &#x64CD;&#x4F5C;&#x3002;&#x8FDE;&#x63A5;&#x6C60;&#x66F4;&#x591A;&#x4ECB;&#x7ECD;&#x53C2;&#x8003;&#x7F51;&#x4E0A;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x8FDE;&#x63A5;&#x6C60;&#x6982;&#x8FF0;&#xFF1A;&#x7BA1;&#x7406;&#x6570;&#x636E;&#x5E93;&#x7684;&#x8FDE;&#x63A5;&#x3002;&#x4F5C;&#x7528;&#xFF1A;&#x63D0;&#x9AD8;&#x9879;&#x76EE;&#x7684;&#x6027;&#x80FD;&#x3002;&#x5C31;&#x662F;&#x5728;&#x8FDE;&#x63A5;&#x6C60;&#x521D;&#x59CB;&#x5316;&#x7684;&#x65F6;&#x5019;&#x5B58;&#x5165;&#x4E00;&#x5B9A;&#x6570;&#x91CF;&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x7528;&#x7684;&#x65F6;&#x5019;&#x901A;&#x8FC7;&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#xFF0C;&#x4E0D;&#x7528;&#x7684;&#x65F6;&#x5019;&#x5F52;&#x8FD8;&#x8FDE;&#x63A5;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x6240;&#x6709;&#x7684;&#x8FDE;&#x63A5;&#x6C60;<strong>&#x5FC5;&#x987B;&#x5B9E;&#x73B0;</strong>&#x4E00;&#x4E2A;&#x63A5;&#x53E3; <code>javax.sql.DataSource</code> &#x63A5;&#x53E3;</p>
+<ul>
+<li><p>&#x83B7;&#x53D6;&#x8FDE;&#x63A5;&#x65B9;&#x6CD5;&#xFF1A;<code>Connection getConnection()</code></p>
+</li>
+<li><p>&#x5F52;&#x8FD8;&#x8FDE;&#x63A5;&#x7684;&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x4EE5;&#x524D;&#x7684;&#x91CA;&#x653E;&#x8D44;&#x6E90;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x8C03;&#x7528; <code>connection.close();</code></p>
+<p>PS&#xFF1A;&#x8FD9;&#x91CC; close() &#x65B9;&#x6CD5;&#x539F;&#x6765;&#x7528;&#x4E8E;&#x5173;&#x95ED;&#xFF0C;&#x73B0;&#x5728;&#x7528;&#x4E8E;&#x5F52;&#x8FD8;&#x3002;&#x600E;&#x4E48;&#x505A;&#x5230;&#x7684;&#x5462;&#xFF1F;&#x8FD9;&#x91CC;&#x7528;&#x5230;&#x4E86;<strong>&#x65B9;&#x6CD5;&#x7684;&#x589E;&#x5F3A;</strong>&#x3002;</p>
+</li>
+</ul>
+<p>&#x65B9;&#x6CD5;&#x589E;&#x5F3A;&#x7684;&#x65B9;&#x5F0F;&#xFF1A;1.&#x7EE7;&#x627F;&#xFF1B;2.&#x88C5;&#x9970;&#x8005;&#x6A21;&#x5F0F;&#xFF08;&#x9759;&#x6001;&#x4EE3;&#x7406;&#xFF09;&#xFF1B;3.&#x52A8;&#x6001;&#x4EE3;&#x7406;</p>
+<p>---------------------------<strong>&#x88C5;&#x9970;&#x8005;&#x6A21;&#x5F0F;</strong>-----------------------------------------</p>
+<p>&#x88C5;&#x9970;&#x8005;&#x6A21;&#x5F0F;&#x4F7F;&#x7528;&#x6B65;&#x9AA4;&#xFF1A;&#xFF08;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x53C2;&#x8003;&#x4E0B;&#x7BC7;&#x7B14;&#x8BB0;&#xFF09;</p>
+<ol>
+<li>&#x88C5;&#x9970;&#x8005;&#x548C;&#x88AB;&#x88C5;&#x9970;&#x8005;&#x5B9E;&#x73B0;&#x540C;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x6216;&#x8005;&#x7EE7;&#x627F;&#x540C;&#x4E00;&#x4E2A;&#x7C7B;</li>
+</ol>
+<ol>
+<li>&#x88C5;&#x9970;&#x8005;&#x4E2D;&#x8981;&#x6709;&#x88AB;&#x88C5;&#x9970;&#x8005;&#x7684;&#x5F15;&#x7528;</li>
+</ol>
+<ol>
+<li>&#x5BF9;&#x9700;&#x8981;&#x589E;&#x5F3A;&#x7684;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x52A0;&#x5F3A;</li>
+</ol>
+<ol>
+<li>&#x5BF9;&#x4E0D;&#x9700;&#x8981;&#x52A0;&#x5F3A;&#x7684;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x539F;&#x6765;&#x65B9;&#x6CD5;</li>
+</ol>
+<p>////////////////////////////////////////////////////////////////////////////////////////////////</p>
+<p>&#x53EF;&#x4EE5;&#x8BD5;&#x7740;&#x81EA;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x8FDE;&#x63A5;&#x6C60;&#x3002;&#xFF08;&#x8BD5;&#x8BD5;&#xFF1F;&#xFF09;</p>
+<pre><code class="lang-java"><span class="hljs-comment">//&#x7B80;&#x6613;&#x7684;&#x8FDE;&#x63A5;&#x6C60;</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyDataSource</span> </span>{
+    <span class="hljs-keyword">static</span> LinkedList&lt;Connection&gt; pool=<span class="hljs-keyword">new</span> LinkedList&lt;&gt;();
+    <span class="hljs-keyword">static</span>{
+        <span class="hljs-comment">//&#x521D;&#x59CB;&#x5316;&#x7684;&#x65F6;&#x5019; &#x9700;&#x8981;&#x653E;&#x5165;3&#x4E2A;&#x8FDE;&#x63A5;</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; i++) {
+            <span class="hljs-keyword">try</span> {
+                Connection conn = JdbcUtils.getConnection();
+                pool.addLast(conn);
+            } <span class="hljs-keyword">catch</span> (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    <span class="hljs-comment">//&#x4ECE;&#x8FDE;&#x63A5;&#x6C60;&#x4E2D;&#x83B7;&#x53D6;&#x8FDE;&#x63A5;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Connection <span class="hljs-title">getConnection</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//&#x83B7;&#x53D6;&#x8FDE;&#x63A5;&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x5224;&#x65AD;list&#x662F;&#x5426;&#x4E3A;&#x7A7A;</span>
+        <span class="hljs-keyword">if</span>(pool.isEmpty()){
+            <span class="hljs-comment">//&#x5728;&#x6DFB;&#x52A0;2&#x4E2A;&#x8FDE;&#x63A5;&#x8FDB;&#x53BB;</span>
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; i++) {
+                <span class="hljs-keyword">try</span> {
+                    Connection conn = JdbcUtils.getConnection();
+                    pool.addLast(conn);
+                } <span class="hljs-keyword">catch</span> (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        System.out.println(<span class="hljs-string">&quot;&#x4ECE;&#x6C60;&#x4E2D;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x8FDE;&#x63A5;&quot;</span>);
+        <span class="hljs-keyword">return</span> pool.removeFirst();
+    }
+    <span class="hljs-comment">//&#x5F52;&#x8FD8;&#x8FDE;&#x63A5;&#x7684;&#x65B9;&#x6CD5;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addBack</span><span class="hljs-params">(Connection conn)</span></span>{
+        <span class="hljs-comment">//&#x5C06;conn&#x653E;&#x5165;&#x5230;list&#x7684;&#x6700;&#x540E;&#x9762;&#x5373;&#x53EF;</span>
+        pool.addLast(conn);
+        System.out.println(<span class="hljs-string">&quot;&#x8FDE;&#x63A5;&#x5DF2;&#x5F52;&#x8FD8;&quot;</span>);
+    }
+}
+</code></pre>
+<p>&#x5E38;&#x89C1;&#x7684;&#x8FDE;&#x63A5;&#x6C60;&#xFF1A;</p>
+<ul>
+<li>DBCP</li>
+<li>C3P0</li>
+</ul>
+<p><strong><em>DBCP&#x8FDE;&#x63A5;&#x6C60;&#xFF1A;&#xFF08;&#x7406;&#x89E3;&#xFF09;</em></strong></p>
+<p>apache &#x7EC4;&#x7EC7;&#x3002;&#x4F7F;&#x7528;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ol>
+<li><p>&#x5BFC;&#x5165; jar &#x5305;(commons-dbcp-1.4.jar&#x548C;commons-pool-1.5.6.jar)</p>
+</li>
+<li><p>&#x4F7F;&#x7528; api&#xFF08;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF09;</p>
+<p>a. &#x786C;&#x7F16;&#x7801;</p>
+<pre><code class="lang-java"><span class="hljs-comment">//&#x521B;&#x5EFA;&#x8FDE;&#x63A5;&#x6C60;</span>
+BasicDataSource ds = <span class="hljs-keyword">new</span> BasicDataSource();
+
+<span class="hljs-comment">//&#x914D;&#x7F6E;&#x4FE1;&#x606F;</span>
+ds.setDriverClassName(<span class="hljs-string">&quot;com.mysql.jdbc.Driver&quot;</span>);
+ds.setUrl(<span class="hljs-string">&quot;jdbc:mysql:///day07&quot;</span>);
+ds.setUsername(<span class="hljs-string">&quot;root&quot;</span>);
+ds.setPassword(<span class="hljs-string">&quot;1234&quot;</span>);
+</code></pre>
+<p>b. &#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-java">&#x5B9E;&#x73B0;&#x7F16;&#x5199;&#x4E00;&#x4E2A;properties&#x6587;&#x4EF6;
+<span class="hljs-comment">//&#x5B58;&#x653E;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span>
+Properties prop = <span class="hljs-keyword">new</span> Properties();
+prop.load(<span class="hljs-keyword">new</span> FileInputStream(<span class="hljs-string">&quot;src/dbcp.properties&quot;</span>));
+<span class="hljs-comment">//&#x8BBE;&#x7F6E;</span>
+<span class="hljs-comment">//prop.setProperty(&quot;driverClassName&quot;, &quot;com.mysql.jdbc.Driver&quot;);</span>
+
+<span class="hljs-comment">//&#x521B;&#x5EFA;&#x8FDE;&#x63A5;&#x6C60;</span>
+DataSource ds = <span class="hljs-keyword">new</span> BasicDataSourceFactory().createDataSource(prop);
+</code></pre>
+</li>
+</ol>
+<p>dbcp&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DbcpDemo</span> </span>{
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-comment">//&#x786C;&#x7F16;&#x7801;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">f1</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception</span>{
+        <span class="hljs-comment">//&#x521B;&#x5EFA;&#x8FDE;&#x63A5;&#x6C60;</span>
+        BasicDataSource ds = <span class="hljs-keyword">new</span> BasicDataSource();
+
+        <span class="hljs-comment">//&#x914D;&#x7F6E;&#x4FE1;&#x606F;</span>
+        ds.setDriverClassName(<span class="hljs-string">&quot;com.mysql.jdbc.Driver&quot;</span>);
+        ds.setUrl(<span class="hljs-string">&quot;jdbc:mysql:///day07&quot;</span>);
+        ds.setUsername(<span class="hljs-string">&quot;root&quot;</span>);
+        ds.setPassword(<span class="hljs-string">&quot;1234&quot;</span>);
+
+        Connection conn=ds.getConnection();
+        String sql=<span class="hljs-string">&quot;insert into category values(?,?);&quot;</span>;
+        PreparedStatement st=conn.prepareStatement(sql);
+
+        <span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x53C2;&#x6570;</span>
+        st.setString(<span class="hljs-number">1</span>, <span class="hljs-string">&quot;c011&quot;</span>);
+        st.setString(<span class="hljs-number">2</span>, <span class="hljs-string">&quot;&#x996E;&#x6599;&quot;</span>);
+
+        <span class="hljs-keyword">int</span> i = st.executeUpdate();
+        System.out.println(i);
+        JdbcUtils.closeResource(conn, st, <span class="hljs-keyword">null</span>);
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">f2</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception</span>{
+        <span class="hljs-comment">//&#x5B58;&#x653E;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span>
+        Properties prop = <span class="hljs-keyword">new</span> Properties();
+        prop.load(<span class="hljs-keyword">new</span> FileInputStream(<span class="hljs-string">&quot;src/dbcp.properties&quot;</span>));
+        <span class="hljs-comment">//&#x8BBE;&#x7F6E;</span>
+        <span class="hljs-comment">//prop.setProperty(&quot;driverClassName&quot;, &quot;com.mysql.jdbc.Driver&quot;);</span>
+
+        <span class="hljs-comment">//&#x521B;&#x5EFA;&#x8FDE;&#x63A5;&#x6C60;</span>
+        DataSource ds = <span class="hljs-keyword">new</span> BasicDataSourceFactory().createDataSource(prop);
+
+        Connection conn=ds.getConnection();
+        String sql=<span class="hljs-string">&quot;insert into category values(?,?);&quot;</span>;
+        PreparedStatement st=conn.prepareStatement(sql);
+
+        <span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x53C2;&#x6570;</span>
+        st.setString(<span class="hljs-number">1</span>, <span class="hljs-string">&quot;c012&quot;</span>);
+        st.setString(<span class="hljs-number">2</span>, <span class="hljs-string">&quot;&#x996E;&#x6599;1&quot;</span>);    
+        <span class="hljs-keyword">int</span> i = st.executeUpdate();
+        System.out.println(i);
+        JdbcUtils.closeResource(conn, st, <span class="hljs-keyword">null</span>);
+    }
+}
+</code></pre>
+<p><strong><em>C3P0&#x8FDE;&#x63A5;&#x6C60;&#xFF1A;&#x2605;</em></strong></p>
+<p>hibernate &#x548C; spring &#x4F7F;&#x7528;&#x662F; c3p0&#xFF0C;&#x6709;&#x81EA;&#x52A8;&#x56DE;&#x6536;&#x7A7A;&#x95F2;&#x8FDE;&#x63A5;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<p>&#x4F7F;&#x7528;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ol>
+<li><p>&#x5BFC;&#x5165; jar &#x5305;(c3p0-0.9.1.2.jar)</p>
+</li>
+<li><p>&#x4F7F;&#x7528; api&#xFF08;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF09;</p>
+<p>a.&#x786C;&#x7F16;&#x7801;(&#x4E0D;&#x63A8;&#x8350;) &#xFF1A;<code>new ComboPooledDataSource()</code></p>
+<p>b.&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<p>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x79F0;: <code>c3p0.properties</code> &#x6216;&#x8005; <code>c3p0-config.xml</code>
+&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;: src &#x4E0B;</p>
+<pre><code class="lang-java">&#x7F16;&#x7801;&#x53EA;&#x9700;&#x8981;&#x4E00;&#x53E5;&#x8BDD;
+    <span class="hljs-keyword">new</span> ComboPooledDataSource()<span class="hljs-comment">//&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x7684;&#x914D;&#x7F6E;</span>
+    <span class="hljs-keyword">new</span> ComboPooledDataSource(String configName)<span class="hljs-comment">//&#x4F7F;&#x7528;&#x547D;&#x540D;&#x7684;&#x914D;&#x7F6E; &#x82E5;&#x914D;&#x7F6E;&#x7684;&#x540D;&#x5B57;&#x627E;&#x4E0D;&#x5230;,&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x7684;&#x914D;&#x7F6E;</span>
+</code></pre>
+</li>
+</ol>
+<p>c3p0&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">C3p0Demo</span> </span>{
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-comment">//&#x786C;&#x7F16;&#x7801;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">f1</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception</span>{
+        ComboPooledDataSource ds = <span class="hljs-keyword">new</span> ComboPooledDataSource();
+
+        <span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x57FA;&#x672C;&#x53C2;&#x6570;</span>
+        ds.setDriverClass(<span class="hljs-string">&quot;com.mysql.jdbc.Driver&quot;</span>);
+        ds.setJdbcUrl(<span class="hljs-string">&quot;jdbc:mysql:///day07&quot;</span>);
+        ds.setUser(<span class="hljs-string">&quot;root&quot;</span>);
+        ds.setPassword(<span class="hljs-string">&quot;1234&quot;</span>);
+
+        Connection conn=ds.getConnection();
+        String sql=<span class="hljs-string">&quot;insert into category values(?,?);&quot;</span>;
+        PreparedStatement st=conn.prepareStatement(sql);
+
+        <span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x53C2;&#x6570;</span>
+        st.setString(<span class="hljs-number">1</span>, <span class="hljs-string">&quot;c013&quot;</span>);
+        st.setString(<span class="hljs-number">2</span>, <span class="hljs-string">&quot;&#x6BD2;&#x836F;&quot;</span>);
+
+        <span class="hljs-keyword">int</span> i = st.executeUpdate();
+        System.out.println(i);
+        JdbcUtils.closeResource(conn, st, <span class="hljs-keyword">null</span>);
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">f2</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception</span>{
+        <span class="hljs-comment">//ComboPooledDataSource ds = new ComboPooledDataSource();</span>
+        ComboPooledDataSource ds =<span class="hljs-keyword">new</span> ComboPooledDataSource(<span class="hljs-string">&quot;itcast12321&quot;</span>);<span class="hljs-comment">//&#x82E5;&#x67E5;&#x627E;&#x4E0D;&#x5230;&#x547D;&#x540D;&#x7684;&#x914D;&#x7F6E; &#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x7684;&#x914D;&#x7F6E;</span>
+        Connection conn=ds.getConnection();
+        String sql=<span class="hljs-string">&quot;insert into category values(?,?);&quot;</span>;
+        PreparedStatement st=conn.prepareStatement(sql);
+
+        <span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x53C2;&#x6570;</span>
+        st.setString(<span class="hljs-number">1</span>, <span class="hljs-string">&quot;c124&quot;</span>);
+        st.setString(<span class="hljs-number">2</span>, <span class="hljs-string">&quot;&#x89E3;&#x836F;&quot;</span>);
+
+        <span class="hljs-keyword">int</span> i = st.executeUpdate();
+        System.out.println(i);
+        JdbcUtils.closeResource(conn, st, <span class="hljs-keyword">null</span>);
+    }
+}
+</code></pre>
+<h4 id="14-&#x4F7F;&#x7528;dbutils&#x5B8C;&#x6210;curd&#x64CD;&#x4F5C;">1.4 &#x4F7F;&#x7528;dbutils&#x5B8C;&#x6210;curd&#x64CD;&#x4F5C;</h4>
+<p>&#x4F7F;&#x7528;&#x539F;&#x751F;&#x7684; jdbc &#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x5B8C;&#x6210; curd &#x64CD;&#x4F5C;&#xFF0C;&#x4F46;&#x4E5F;&#x53EF;&#x4EE5;&#x8FDB;&#x4E00;&#x6B65;&#x7B80;&#x5316; jdbc &#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; dbutils&#xFF0C;&#x5B83;&#x662F;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;&#x5B83;&#x662F; apache &#x7EC4;&#x7EC7;&#x7684;&#x4E00;&#x4E2A;&#x5DE5;&#x5177;&#x7C7B;&#xFF0C;&#x662F;&#x4E00;&#x4E2A; jdbc &#x6846;&#x67B6;&#xFF0C;&#x5BF9;&#x4F20;&#x7EDF;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x5E93;&#x7684;&#x7C7B;&#x8FDB;&#x884C;&#x4E8C;&#x6B21;&#x5C01;&#x88C5;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x7ED3;&#x679C;&#x96C6;&#x8F6C;&#x5316;&#x6210; List&#xFF0C;&#x66F4;&#x65B9;&#x4FBF;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x4F7F;&#x7528;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ol>
+<li><p>&#x5BFC;&#x5165; jar &#x5305;(commons-dbutils-1.4.jar)</p>
+</li>
+<li><p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A; queryrunner &#x7C7B;</p>
+<p>queryrunner &#x4F5C;&#x7528;: &#x64CD;&#x4F5C; sql &#x8BED;&#x53E5;&#xFF1B;&#x6784;&#x9020;&#x65B9;&#x6CD5; <code>new QueryRunner(Datasource ds);</code></p>
+</li>
+<li><p>&#x7F16;&#x5199; sql</p>
+</li>
+<li><p>&#x6267;&#x884C; sql&#xFF1A;&#x5982; <code>query(..)</code> &#x6267;&#x884C;r&#x64CD;&#x4F5C;&#x3001;<code>update(...)</code> &#x6267;&#x884C; cud &#x64CD;&#x4F5C;</p>
+</li>
+</ol>
+<p><strong>&#x6838;&#x5FC3;&#x7C7B;&#x6216;&#x63A5;&#x53E3;</strong></p>
+<ul>
+<li><p>QueryRunner: &#x7C7B;&#x540D;</p>
+<blockquote>
+<p>&#x4F5C;&#x7528;: &#x64CD;&#x4F5C;sql&#x8BED;&#x53E5;&#xFF1B;&#x6784;&#x9020;&#x5668;: <code>new QueryRunner(Datasource ds);</code></p>
+<p>&#x6CE8;&#x610F;: &#x5E95;&#x5C42;&#x5E2E;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x8FDE;&#x63A5;,&#x521B;&#x5EFA;&#x8BED;&#x53E5;&#x6267;&#x884C;&#x8005; ,&#x91CA;&#x653E;&#x8D44;&#x6E90;.</p>
+<p>&#x5E38;&#x7528;&#x65B9;&#x6CD5;: <code>query(..):</code>&#x3001;<code>update(..):</code>        </p>
+</blockquote>
+</li>
+<li><p>DbUtils: &#x91CA;&#x653E;&#x8D44;&#x6E90;&#xFF0C;&#x63A7;&#x5236;&#x4E8B;&#x52A1;&#x3002;&#x7C7B;</p>
+<ul>
+<li><code>closeQuietly(conn)</code>: &#x5185;&#x90E8;&#x5904;&#x7406;&#x4E86;&#x5F02;&#x5E38;</li>
+<li><code>commitAndClose(Connection conn)</code>: &#x63D0;&#x4EA4;&#x4E8B;&#x52A1;&#x5E76;&#x91CA;&#x653E;&#x8FDE;&#x63A5;
+   ....            </li>
+</ul>
+</li>
+<li><p>ResultSetHandler&#xFF1A;&#x5C01;&#x88C5;&#x7ED3;&#x679C;&#x96C6;&#xFF1B;&#x63A5;&#x53E3;</p>
+<blockquote>
+<p> ArrayHandler, ArrayListHandler, BeanHandler, BeanListHandler, ColumnListHandler, KeyedHandler, MapHandler, MapListHandler, ScalarHandler</p>
+</blockquote>
+<pre><code class="lang-xml">(&#x4E86;&#x89E3;)ArrayHandler, &#x5C06;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x7684;&#x7B2C;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x5C01;&#x88C5;&#x6210;&#x6570;&#x7EC4;,&#x8FD4;&#x56DE;
+(&#x4E86;&#x89E3;)ArrayListHandler, &#x5C06;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x5C01;&#x88C5;&#x6210;&#x6570;&#x7EC4;,&#x5C06;&#x6BCF;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x653E;&#x5165;list&#x4E2D;&#x8FD4;&#x56DE;
+&#x2605;&#x2605;BeanHandler, &#x5C06;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x7684;&#x7B2C;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x5C01;&#x88C5;&#x6210;&#x6307;&#x5B9A;&#x7684;bean&#x5BF9;&#x8C61;,&#x8FD4;&#x56DE;
+&#x2605;&#x2605;BeanListHandler, &#x5C06;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x5C01;&#x88C5;&#x6210;&#x6307;&#x5B9A;&#x7684;bean&#x5BF9;&#x8C61;,&#x5C06;&#x6BCF;&#x4E00;&#x4E2A;bean&#x5BF9;&#x8C61;&#x653E;&#x5165;list&#x4E2D; &#x8FD4;&#x56DE;.
+(&#x4E86;&#x89E3;)ColumnListHandler, &#x5C06;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x7684;&#x6307;&#x5B9A;&#x4E00;&#x5217;&#x653E;&#x5165;list&#x4E2D;&#x8FD4;&#x56DE; 
+(&#x4E86;&#x89E3;)MapHandler, &#x5C06;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x7684;&#x7B2C;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x5C01;&#x88C5;&#x6210;map,&#x5B57;&#x6BB5;&#x540D;&#x4F5C;&#x4E3A;key,&#x503C;&#x4E3A;value &#x8FD4;&#x56DE;
+&#x2605;MapListHandler, &#x5C06;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x5C01;&#x88C5;map&#x96C6;&#x5408;,&#x5C06;&#x6BCF;&#x4E00;&#x4E2A;map&#x96C6;&#x5408;&#x653E;&#x5165;list&#x4E2D;&#x8FD4;&#x56DE;
+&#x2605;ScalarHandler,&#x9488;&#x5BF9;&#x4E8E;&#x805A;&#x5408;&#x51FD;&#x6570; &#x4F8B;&#x5982;:count(*) &#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;Long&#x503C;
+</code></pre>
+</li>
+</ul>
+<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CURDDemo</span> </span>{
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">insert</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> SQLException</span>{
+        <span class="hljs-comment">//1.&#x521B;&#x5EFA;queryrunner&#x7C7B;</span>
+        QueryRunner qr = <span class="hljs-keyword">new</span> QueryRunner(DataSourceUtils.getDataSource());    
+        <span class="hljs-comment">//2.&#x7F16;&#x5199;sql</span>
+        String sql=<span class="hljs-string">&quot;insert into category values(?,?)&quot;</span>;    
+        <span class="hljs-comment">//3.&#x6267;&#x884C;sql</span>
+        qr.update(sql, <span class="hljs-string">&quot;c201&quot;</span>,<span class="hljs-string">&quot;&#x53A8;&#x623F;&#x7535;&#x5668;&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">update</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> SQLException</span>{
+        QueryRunner qr=<span class="hljs-keyword">new</span> QueryRunner(DataSourceUtils.getDataSource());
+        String sql=<span class="hljs-string">&quot;update category set cname = ? where cid = ?&quot;</span>;
+        qr.update(sql, <span class="hljs-string">&quot;&#x8FBE;&#x7535;&#x5668;&quot;</span>,<span class="hljs-string">&quot;c000&quot;</span>);
+    }
+
+    <span class="hljs-comment">//.....</span>
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">arrayHandler</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> SQLException</span>{
+        QueryRunner qr=<span class="hljs-keyword">new</span> QueryRunner(DataSourceUtils.getDataSource());
+        String sql=<span class="hljs-string">&quot;select * from category&quot;</span>;
+        Object[] query = qr.query(sql, <span class="hljs-keyword">new</span> ArrayHandler());
+        System.out.println(Arrays.toString(query));
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">arrayListHandler</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> SQLException</span>{
+        QueryRunner qr=<span class="hljs-keyword">new</span> QueryRunner(DataSourceUtils.getDataSource());
+        String sql=<span class="hljs-string">&quot;select * from category&quot;</span>;
+        List&lt;Object[]&gt; list = qr.query(sql, <span class="hljs-keyword">new</span> ArrayListHandler());
+        <span class="hljs-keyword">for</span> (Object[] obj : list) {
+            System.out.println(Arrays.toString(obj));
+        }
+    }
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="05-数据库.html" class="navigation navigation-prev " aria-label="Previous page: 05-数据库">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="06-JDBC_装饰者模式.html" class="navigation navigation-next " aria-label="Next page: 06-JDBC_装饰者模式(静态代理)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"06-JDBC","level":"1.3.6","depth":2,"next":{"title":"06-JDBC_装饰者模式(静态代理)","level":"1.3.7","depth":2,"path":"ch2/06-JDBC_装饰者模式.md","ref":"ch2/06-JDBC_装饰者模式.md","articles":[]},"previous":{"title":"05-数据库","level":"1.3.5","depth":2,"path":"ch2/05-数据库.md","ref":"ch2/05-数据库.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch2/06-JDBC.md","mtime":"2018-07-10T08:06:09.920Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-27T12:46:27.360Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
