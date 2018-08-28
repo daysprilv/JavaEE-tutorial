@@ -1,3 +1,4 @@
-*.pdf
-*.PDF
+.DS_Store
+book.pdf
+book.PDF
 _book/
