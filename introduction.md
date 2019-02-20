@@ -32,11 +32,9 @@
 
 ## 联系我
 
-博客：<https://www.strivebo.com>
-
-GitHub：https://github.com/strivebo
-
-联系邮箱：<ishuzb@foxmail.com>
+- 博客：<https://www.strivebo.com>
+- GitHub：https://github.com/strivebo
+- 联系邮箱：<ishuzb@foxmail.com>
 
 
 
