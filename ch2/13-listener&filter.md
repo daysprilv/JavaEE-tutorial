@@ -1,12 +1,14 @@
-### 1、监听器（listener）
+<p align="center" style="font-size:44px;font-weight:bold;">
+    13-Listener&Filter
+</p>
 
-#### 1.1 监听器简介
+# 1. 监听器(listener)
 
-什么是监听器？
+## (1) 监听器简介
 
-> 监听器就是一个 Java 类用来监听其他的 JavaBean 的变化。
+什么是监听器？监听器就是一个 Java 类用来监听其他的 JavaBean 的变化。
 
-PS：监听器和过滤器属于Servlet中的高级技术。
+> 注：监听器和过滤器属于Servlet中的高级技术。
 
 监听器的应用：
 
@@ -15,54 +17,53 @@ PS：监听器和过滤器属于Servlet中的高级技术。
 
 监听器的术语：
 
-> - 事件源：被监听的对象		汽车
-> - 监听器对象：监听的对象   汽车上报警器
-> - 事件源与监听器绑定
-> - 事件：指的是事件源的改变
-> - 获取事件源对象
+- 事件源：被监听的对象，例子：汽车
+- 监听器对象：监听的对象，例子：汽车上报警器
+- 事件源与监听器绑定
+- 事件：指的是事件源的改变
+- 获取事件源对象
 
 **servlet 的监听器：**
 
-> 监听 ServletContext、HttpSession、ServletRequest
->
-> 事件源和监听器绑定的过程：通过配置完成。
->
-> 注意：listener 全部是接口
->
-> Servlet 中的监听器，提供了8个监听器：
->
-> - 一类：监听三个域对象的创建和销毁
->   - ServletContextListener
->   - ServletRequestListener
->   - HttpSessionListener
-> - 二类：监听三个域对象属性的变化
->   - ServletContextAttributeListener
->   - ServletRequestAttributeListener
->   - HttpSessionAttributeListener
-> - 三类：监听 session 中 javabean 的状态
->   - HttpSessionActivationListener(钝化和活化)
->   - HttpSessionBindingListener(绑定和解绑)
->
+监听 ServletContext、HttpSession、ServletRequest
 
-Servlet中的监听器：提供了8个监听器。
+事件源和监听器绑定的过程：通过配置完成。
+
+注意：listener 全部是接口
+
+Servlet 中的监听器，提供了 8 个监听器：
+
+- 一类：监听三个域对象的创建和销毁
+  - ServletContextListener
+  - ServletRequestListener
+  - HttpSessionListener
+- 二类：监听三个域对象属性的变化
+  - ServletContextAttributeListener
+  - ServletRequestAttributeListener
+  - HttpSessionAttributeListener
+- 三类：监听 session 中 javabean 的状态
+  - HttpSessionActivationListener(钝化和活化)
+  - HttpSessionBindingListener(绑定和解绑)
+
+Servlet 中的监听器：提供了 8 个监听器。
 
 - 一类：监听三个域对象的创建和销毁的监听器。 3个
 - 二类：监听三个域对象的属性变更的监听器(属性添加、属性移除、属性替换) 。 3个
-- 三类：监听 HttpSession 对象中的 JavaBean 的状态的改变(绑定,解除绑定,钝化和活化) 。 3个
+- 三类：监听 HttpSession 对象中的 JavaBean 的状态的改变（绑定，解除绑定，钝化和活化） 。 3个
 
 使用步骤：
 
-1. 编写一个类 实现接口
+1. 编写一个类，实现接口
 2. 重写方法
-3. 编写配置文件(大部分都是)
+3. 编写配置文件（大部分都是）
 
+## (2) 演示各个监听器
 
+### 监听三个对象的创建和销毁
 
-#### 1.2 演示各个监听器
+####①ServletContextListener
 
-##### 1.1.1 监听三个对象的创建和销毁
-
-**① ServletContextListener：监听ServletContext对象的创建和销毁**
+ServletContextListener：监听ServletContext对象的创建和销毁
 
 ``` xml
 ServletContextListener
@@ -71,35 +72,33 @@ ServletContextListener
     以后用来加载配置文件
 ```
 
-【入门案例】
-
-1、编写一个类实现监听器的接口
+（1）编写一个类实现监听器的接口
 
 ``` java
 public class MyServletContextListener implements ServletContextListener{
 
-	@Override
-	/**
+    @Override
+    /**
 	 * 监听ServletContext对象的创建的方法:
 	 * @param sce
 	 */
-	public void contextInitialized(ServletContextEvent sce) {
-		System.out.println("ServletContext对象被创建了...");
-	}
+    public void contextInitialized(ServletContextEvent sce) {
+        System.out.println("ServletContext对象被创建了...");
+    }
 
-	@Override
-	/**
+    @Override
+    /**
 	 * 监听ServletContext对象的销毁的方法:
 	 * @param sce
 	 */
-	public void contextDestroyed(ServletContextEvent sce) {
-		System.out.println("ServletContext对象被销毁了...");
-	}
+    public void contextDestroyed(ServletContextEvent sce) {
+        System.out.println("ServletContext对象被销毁了...");
+    }
 
 }
 ```
 
-2、通过配置完成监听器和事件源的绑定
+（2）通过配置完成监听器和事件源的绑定
 
 ``` xml
 <!-- 配置监听器 -->
@@ -118,7 +117,9 @@ public class MyServletContextListener implements ServletContextListener{
     Timer,TimerTask
 ```
 
-**② HttpSessionListener：监听HttpSession对象的创建和销毁的监听器**
+#### ②HttpSessionListener：监听HttpSession对象的创建和销毁的监听器
+
+HttpSessionListener：监听 HttpSession 对象的创建和销毁的监听器
 
 ``` xml
 创建:
@@ -130,9 +131,7 @@ public class MyServletContextListener implements ServletContextListener{
     服务器非正常关闭(正常关闭序列化到硬盘)
 ```
 
-【入门】
-
-1、编写监听器
+（1）编写监听器
 
 ``` java
 public class MyHttpSessionListener implements HttpSessionListener {
@@ -147,7 +146,7 @@ public class MyHttpSessionListener implements HttpSessionListener {
 }
 ```
 
-2、配置监听器
+（2）配置监听器
 
 ``` xml
 <listener>
@@ -155,22 +154,22 @@ public class MyHttpSessionListener implements HttpSessionListener {
 </listener>
 ```
 
-【问题】
+问题：
 
-1. 访问 html 是否创建 session 对象？	答：不会
-2. 访问一个 Servlet 是否创建 session 对象？ 答：不会
-3. 访问一个 jsp 是否创建 session 对象？  答：会
+1. 访问 html 是否创建 session 对象？答：不会
+2. 访问一个 Servlet 是否创建 session 对象？答：不会
+3. 访问一个 jsp 是否创建 session 对象？答：会
 
-**③ ServletRequestListener：监听ServletRequest对象的创建和销毁的监听器**
+#### ③ServletRequestListener：监听ServletRequest对象的创建和销毁的监听器
+
+ServletRequestListener：监听 ServletRequest 对象的创建和销毁的监听器
 
 ``` xml
 创建:客户端向服务器发送请求的时候.
 销毁:服务器为这次请求作出了响应时候.
 ```
 
-【入门】
-
-1、编写一个监听器
+（1）编写一个监听器
 
 ``` java
 public class MyServletRequestListener implements ServletRequestListener {
@@ -183,7 +182,7 @@ public class MyServletRequestListener implements ServletRequestListener {
 }
 ```
 
-2、配置监听器
+（2）配置监听器
 
 ``` xml
 <listener>
@@ -191,37 +190,35 @@ public class MyServletRequestListener implements ServletRequestListener {
 </listener>
 ```
 
-【问题】
+问题：
 
-1. 访问 html 是否创建 request 对象？	答：会
-2. 访问一个 Servlet 是否创建 request 对象？  答：会
-3. 访问一个 jsp 是否创建 request 对象？  答：会
-
-
-
-##### 1.1.2 监听三个对象属性的变化(添加 替换 删除)
-
-**① ServletContextAttributeListener：监听ServletContext对象中的属性变更的监听器**
-
-【方法】
-
-![](http://p35l3ejfq.bkt.clouddn.com/18-6-3/52970812.jpg)
-
-**② HttpSessionAttributeListener：监听HttpSession对象中的属性变更的监听器**
-
-【方法】
-
-![](http://p35l3ejfq.bkt.clouddn.com/18-6-3/43199677.jpg)
-
-**③ ServletRequestAttributeListener：监听ServletRequest对象中的属性变更的监听器**
-
-【方法】
-
-![](http://p35l3ejfq.bkt.clouddn.com/18-6-3/8478345.jpg)
+1. 访问 html 是否创建 request 对象？答：会
+2. 访问一个 Servlet 是否创建 request 对象？答：会
+3. 访问一个 jsp 是否创建 request 对象？答：会
 
 
 
-##### 1.1.3 监听session中javabean的状态
+### 监听三个对象属性的变化(添加 替换 删除)
+
+#### ①ServletContextAttributeListener
+
+ServletContextAttributeListener：监听 ServletContext 对象中的属性变更的监听器
+
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-6-3-52970812.jpg)
+
+#### ②HttpSessionAttributeListener
+
+HttpSessionAttributeListener：监听 HttpSession 对象中的属性变更的监听器
+
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-6-3-43199677.jpg)
+
+#### ③ServletRequestAttributeListener：监听ServletRequest对象中的属性变更的监听器
+
+ServletRequestAttributeListener：监听 ServletRequest 对象中的属性变更的监听器
+
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-6-3-8478345.jpg)
+
+### 监听session中javabean的状态
 
 ``` xml
 三类监听器非常特殊：
@@ -253,41 +250,38 @@ public class MyServletRequestListener implements ServletRequestListener {
   </Context>
   ```
 
+#### ①HttpSessionBindingListener
 
-**① HttpSessionBindingListener：监听HttpSession中的JavaBean的绑定和解除绑定的状态**
+HttpSessionBindingListener：监听 HttpSession 中的 JavaBean 的绑定和解除绑定的状态。
 
-【方法】
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-6-3-12813748.jpg)
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-6-3/12813748.jpg)
+### ②HttpSessionActivationListener
 
-**② HttpSessionActivationListener：监听HttpSession中的JavaBean的钝化和活化的状态**
+HttpSessionActivationListener：监听 HttpSession 中的 JavaBean 的钝化和活化的状态
 
-【方法】
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-6-3-57191187.jpg)
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-6-3/57191187.jpg)
-
-- `sessionDidActivate(HttpSessionEvent se);`  -- 活化
-- `sessionWillPassivate(HttpSessionEvent se);` -- 钝化
-
+- `sessionDidActivate(HttpSessionEvent se);`：活化
+- `sessionWillPassivate(HttpSessionEvent se);`：钝化
 
 
 
-### 2、过滤器（Filter）
 
-什么是过滤器？
+# 2. 过滤器(Filter)
 
-> 一个实现了特殊接口的 Java 类，实现对请求资源的过滤功能。
->
-> - 过滤器是 Servlet 技术中最为实用的技术。
-> - Filter 是一个接口
->
-> 过滤器的作用：对目标资源进行过滤
->
-> - 自动登录、解决网站乱码、进行页面静态化、进行响应压缩等等
+什么是过滤器？一个实现了特殊接口的 Java 类，实现对请求资源的过滤功能。
+
+- 过滤器是 Servlet 技术中最为实用的技术。
+- Filter 是一个接口
+
+过滤器的作用：对目标资源进行过滤
+
+- 自动登录、解决网站乱码、进行页面静态化、进行响应压缩等等
 
 看下面这张图理解：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-6-3/8263968.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-6-3-8263968.jpg)
 
 编写 filter 步骤：
 
@@ -325,11 +319,9 @@ FilterChain:过滤链
 ★一个资源有可能被多个过滤器匹配成功,多个过滤器的执行顺序是按照web.xml中filter-mapping的顺序执行的
 ```
 
+使用过滤器：
 
-
-【使用过滤器】
-
-1、编写一个类实现
+（1）编写一个类实现
 
 ``` java
 public class FilterDemo1 implements Filter{
@@ -355,7 +347,7 @@ public class FilterDemo1 implements Filter{
 }
 ```
 
-2、对过滤器进行配置
+（2）对过滤器进行配置
 
 ``` xml
 <filter>
@@ -369,7 +361,7 @@ public class FilterDemo1 implements Filter{
 </filter-mapping>
 ```
 
-【过滤器的生命周期】
+过滤器的生命周期：
 
 ``` xhtml
 Servlet的生命周期(*****)
@@ -377,9 +369,9 @@ Servlet的生命周期(*****)
     服务器启动的时候，服务器就会创建过滤器的对象，每次访问被拦截目标资源，过滤器中的doFilter的方法就会执行。当服务器关闭的时候，服务器就会销毁Filter对象。
 ```
 
-【FilterConfig的作用】
+FilterConfig 的作用：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-6-3/97369115.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-6-3-97369115.jpg)
 
 ``` java
 // 获得初始化参数:过滤器的初始化参数.
@@ -401,13 +393,13 @@ System.out.println("过滤器名称"+filterName);
 
 ```
 
-【FilterChain：过滤器链】
+FilterChain，过滤器链：
 
-过滤器链中的过滤器的执行的顺序跟`<filter-mapping>`的配置顺序有关。
+过滤器链中的过滤器的执行的顺序跟 `<filter-mapping>` 的配置顺序有关。
 
 方法：`void DoFilter(ServletRequest request, ServletResponse response);`
 
-【Filter的配置】
+Filter 的配置：
 
 ``` xml
 【url-pattern的配置】与servlet中的配置一样：
@@ -425,13 +417,9 @@ ERROR		：拦截跳转到错误页面.全局错误页面.
 INCLUDE	：拦截在一个页面中包含另一个页面.
 ```
 
-///////////////////////////////////////////////////
-
 **案例-网站的字符集编码**
 
-需求：
-
-> 在整个网站中，可能会有get请求或post请求向服务器提交参数，参数中往往有中文信息，在后台每个Servlet中都需要去处理乱码。无论get请求或者是post请求提交到Servlet中，就可以直接调用getParameter方法将乱码处理好。
+需求：在整个网站中，可能会有 get 请求或 post 请求向服务器提交参数，参数中往往有中文信息，在后台每个 servlet 中都需要去处理乱码。无论 get 请求或者是 post 请求提交到 servlet 中，就可以直接调用 getParameter 方法将乱码处理好。
 
 分析：
 
@@ -445,10 +433,11 @@ INCLUDE	：拦截在一个页面中包含另一个页面.
 
 - 步骤分析：
 
-  > 设计一个页面：向Servlet中提交中文
-  >
-  > 编写过滤器的方式到达目标资源之前进行增强
-  >
-  > - 增强 request 中的 getParameter( ) 方法
-  >
-  > 放行：将增强的request放行
+  1. 设计一个页面：向 servlet 中提交中文
+
+  2. 编写过滤器的方式到达目标资源之前进行增强
+     - 增强 request 中的 getParameter( ) 方法
+
+  3. 放行：将增强的 request 放行
+
+  

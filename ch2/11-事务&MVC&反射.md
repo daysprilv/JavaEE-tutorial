@@ -1,19 +1,23 @@
-### 1、MVC
+<p align="center" style="font-size:44px;font-weight:bold;">
+    11-事务&MVC&反射
+</p>
 
-mvc 思想：
+# 1. MVC
 
-- servlet ----> 缺点：生成html内容太麻烦
+MVC 思想：
 
-- jsp -----> 缺点：阅读起来不方便,维护比较困难
+- servlet --> 缺点：生成 html 内容太麻烦
 
-- jsp+javabean：（jsp的 model1）
+- jsp --> 缺点：阅读起来不方便,维护比较困难
+
+- jsp + javabean：（jsp 的 model1）
 
   ``` xml
   jsp:接受请求,展示数据
   javabean:和数据打交道 
   ```
 
-- jsp+javabean+servlet：（jsp的 model2）
+- jsp + javabean + servlet：（jsp 的 model2）
 
   ``` xml
   jsp:展示数据
@@ -21,23 +25,19 @@ mvc 思想：
   servlet:接受请求,处理业务逻辑		
   ```
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-6-2/4379277.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-6-2-4379277.jpg)
 
-**MVC：** 就是将业务逻辑、代码、显示相分离的一种思想
+MVC： 就是将业务逻辑、代码、显示相分离的一种思想
 
-> M：model 	模型 	作用：主要是封装数据,封装对数据的访问
->
-> V：view 		视图 	作用：主要是用来展示数据 一般是jsp担任的
->
-> C：ctrl		控制 	作用：接受请求,找到相应的javabean完成业务逻辑
+- M：model，模型，作用：主要是封装数据,封装对数据的访问
+- V：view，视图，作用：主要是用来展示数据 一般是 jsp 担任的
+- C：ctrl，控制，作用：接受请求,找到相应的 javabean 完成业务逻辑
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-6-2/60246070.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-6-2-60246070.jpg)
 
-MVC是模型(model)－视图(view)－控制器(controller)的缩写，是一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件里面，在改进和个性化定制界面及用户交互的同时，不需要重新编写业务逻辑。
+MVC 是模型(model)－视图(view)－控制器(controller)的缩写，是一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件里面，在改进和个性化定制界面及用户交互的同时，不需要重新编写业务逻辑。
 
-///////////////////////////////////////////////////////
-
-jsp设计模式1 model1：(了解)	javabean+jsp
+jsp 设计模式1 - model1：javabean+jsp
 
 ``` xml
 <!-- 接受值 -->
@@ -74,9 +74,7 @@ jsp设计模式1 model1：(了解)	javabean+jsp
 6.Method对象的invoke是有返回值,他的返回值就是目标方法执行的返回值
 ```
 
-总结：有了class对象之后，无所不能。
-
-///////////////////////////////////////////////////////////
+有了 class 对象之后，无所不能。
 
 javabean 在 model2 中使用
 
@@ -87,9 +85,7 @@ BeanUtils:可以看作封装数据一个工具类
         2.使用BeanUtils.populate(Object bean,Map map);
 ```
 
-////////////////////////////////////////////////////////////////////
-
-分层：javaee的三层架构
+分层：JavaEE 的三层架构
 
 ``` xml
 web
@@ -107,17 +103,15 @@ dao(data access object 数据访问对象)
 
 
 
-### 2、事务
+# 2. 事务
 
-> 就是一件完整的事情，包含多个操作单元，这些操作要么全部成功，要么全部失败。
->
-> 例如：转账。包含转出操作和转入操作。
+就是一件完整的事情，包含多个操作单元，这些操作要么全部成功，要么全部失败。
 
+例如：转账。包含转出操作和转入操作。
 
+## (1) mysql中的事务
 
-#### 2.1 mysql 中的事务
-
-> mysql 中事务默认是自动提交，一条sql语句就是一个事务。
+mysql 中事务默认是自动提交，一条 sql 语句就是一个事务。
 
 开启手动事务方式：
 
@@ -130,11 +124,9 @@ dao(data access object 数据访问对象)
     rollback;-- 事务回滚
 ```
 
-扩展：oracle中事务默认是手动的,必须手动提交才可以.
+扩展：oracle 中事务默认是手动的，必须手动提交才可以。
 
-
-
-#### 2.2 java中的事务
+## (2) java中的事务
 
 ``` xml
 Connection接口的api:★
@@ -151,51 +143,47 @@ Connection接口的api:★
 
 ``` java
 public class AccountService {
-	/**
+    /**
 	 * 转账
 	 * @param fromUser 转出方
 	 * @param toUser 转入方
 	 * @param money 金额
 	 * @throws Exception 
 	 */
-	public void account(String fromUser, String toUser, String money) throws Exception {
-		AccountDao dao = new AccountDao();
-		Connection conn=null;
-		try {
-			//0.开启事务
-			conn = JdbcUtils.getConnection();
-			conn.setAutoCommit(false);
-			
-			//1.转出
-			dao.accountOut(conn,fromUser,money);
-			
-			int i=1/0;
-			
-			//2.转入
-			dao.accountIn(conn,toUser,money);
-			
-			//3.事务提交
-			conn.commit();
-			JdbcUtils.closeConn(conn);
-		} catch (Exception e) {
-			e.printStackTrace();
-			
-			//事务回滚
-			conn.rollback();
-			JdbcUtils.closeConn(conn);
-			throw e;
-		}	
-	}
+    public void account(String fromUser, String toUser, String money) throws Exception {
+        AccountDao dao = new AccountDao();
+        Connection conn=null;
+        try {
+            //0.开启事务
+            conn = JdbcUtils.getConnection();
+            conn.setAutoCommit(false);
+
+            //1.转出
+            dao.accountOut(conn,fromUser,money);
+
+            int i=1/0;
+
+            //2.转入
+            dao.accountIn(conn,toUser,money);
+
+            //3.事务提交
+            conn.commit();
+            JdbcUtils.closeConn(conn);
+        } catch (Exception e) {
+            e.printStackTrace();
+
+            //事务回滚
+            conn.rollback();
+            JdbcUtils.closeConn(conn);
+            throw e;
+        }	
+    }
 }
 ```
 
-
-
-////////////////////////////////////////////////////////
-
 案例：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-6-2/44118142.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-6-2-44118142.jpg)
 
 ``` xml
 步骤分析:
@@ -219,9 +207,9 @@ public class AccountService {
 
 **一旦出现异常，钱飞了！！！**
 
-要想避免这事情，必须添加事务，在service添加事务，为了保证所有的操作在一个事务中，必须保证使用的是同一个连接。
+要想避免这事情，必须添加事务，在 service 添加事务，为了保证所有的操作在一个事务中，必须保证使用的是同一个连接。
 
-在 service 层我们获取了连接，开启了事务。如何 dao 层使用此连接呢????
+在 Service 层我们获取了连接，开启了事务。如何 DAO 层使用此连接呢？
 
 ``` xml
 方法1:
@@ -434,7 +422,7 @@ public class AccountService4DB {
 }
 ```
 
-////////////////////////////////////
+
 
 ``` xml
 DButils:
@@ -452,18 +440,16 @@ QueryRunner:
 		一旦使用手动事务,调用方法的时候都需要手动传入connection,并且需要手动关闭连接
 ```
 
-////////////////////////////////
+## (3) 事务的总结
 
-#### 2.3 事务的总结
-
-##### 2.3.1 事务的特性：  ACID
+### ①事务的特性(ACID)
 
 - 原子性：事务里面的操作单元不可切割，要么全部成功，要么全部失败
 - 一致性：事务执行前后，业务状态和其他业务状态保持一致
 - 隔离性：一个事务执行的时候最好不要受到其他事务的影响
 - 持久性：一旦事务提交或者回滚，这个状态都要持久化到数据库中
 
-##### 2.3.2 如果不考虑事务的隔离性，引发一些安全性问题
+### ②如果不考虑事务的隔离性，引发一些安全性问题
 
 读问题：三类
 
@@ -471,11 +457,11 @@ QueryRunner:
 - 不可重复读：一个事务读到了另一个事务已经提交(update)的数据，引发一个事务中的多次查询结果不一致
 - 虚读(幻读)：一个事务读到了另一个事务已经提交的（insert）数据，导致多次查询的结果不一致
 
-##### 2.3.3 解决读问题
+### ③解决读问题
 
 通过设置数据库的隔离级别来避免上面的问题
 
-``` xml
+``` sql
 read uncommitted  	读未提交	上面的三个问题都会出现
 read committed  	读已提交	可以避免脏读的发生
 repeatable read		可重复读	可以避免脏读和不可重复读的发生
@@ -484,7 +470,7 @@ serializable		串行化		可以避免所有的问题
 
 演示脏读的发生：
 
-``` xml
+``` sql
 将数据库的隔离级别设置成 读未提交
 	set session transaction isolation level read uncommitted;
 查看数据库的隔离级别
@@ -493,19 +479,19 @@ serializable		串行化		可以避免所有的问题
 
 避免脏读的发生，将隔离级别设置成：读已提交
 
-``` xml
+``` sql
 set session transaction isolation level read committed; 不可避免不可重复读的发生
 ```
 
 避免不可重复读的发生，将隔离级别设置成：可重复读
 
-``` xml
+``` sql
 set session transaction isolation level  repeatable read;
 ```
 
 演示串行化 可以避免所有的问题：
 
-``` xml
+``` sql
 set session transaction isolation level  serializable;
 锁表操作.
 ```
@@ -516,15 +502,15 @@ set session transaction isolation level  serializable;
 
 开发中绝对不允许脏读发生！
 
-> mysql中默认隔离级别：repeatable read
->
-> oracle中默认隔离级别：read committed
+- mysql中默认隔离级别：repeatable read
+
+- oracle中默认隔离级别：read committed
 
 **JDBC 的隔离级别的设置：** Connection 的 api
 
->  `void setTransactionIsolation(int level) `  //level 是常量
+- `void setTransactionIsolation(int level) `  //level 是常量
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-6-2/5699946.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-6-2-5699946.jpg)
 
 **使用 DBUtils 的进行事务的管理：**
 
@@ -551,13 +537,7 @@ QueryRunner：
     int update(Connection conn,String sql,Object... params);
 ```
 
-
-
-
-
-
-
-##### 2.3.4 演示
+### ④演示
 
 **演示脏读的发生：**
 
@@ -623,7 +603,7 @@ QueryRunner：
 步骤九：在A窗口中结束事务,再重新查询.
 ```
 
-演示隔离级别为serializable：
+**演示隔离级别为 serializable：**
 
 ``` xml
 步骤一：分别开启两个窗口A,B:
@@ -640,8 +620,6 @@ QueryRunner：
 	没有任何结果！！！（不可以事务并发执行的）
 步骤七：在B窗口中结束事务！
 ```
-
-
 
 
 

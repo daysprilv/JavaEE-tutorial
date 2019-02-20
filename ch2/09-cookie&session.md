@@ -1,37 +1,8 @@
-### 1、JSP简单认识
+<p align="center" style="font-size:44px;font-weight:bold;">
+    09-Cookie&Session
+</p>
 
-jsp：java server pages（java服务器页面）
-
-> 本质上 jsp 就是一个 servlet，在 html 代码中嵌套 java 代码，运行在服务器端,处理请求，生成动态的内容。
->
-> 对应的 java 和 class 文件在 tomcat 目录下的 work 目录。后缀名 `.jsp`
-
-执行流程：
-
-1. 浏览器发送请求，访问 jsp 页面
-2. 服务器接受请求，jspSerlvet 会帮我们查找对应的 jsp 文件
-
-3. 服务器将 jsp 页面翻译成java文件.
-4. jvm会将 java 编译成`.class`文件
-5. 服务器运行class文件，生成动态的内容.
-6. 将内容发送给服务器,
-7. 服务器组成响应信息，发送给浏览器
-8. 浏览器接受数据，解析展示
-
-**jsp的脚本：**
-
-``` xml
-<%...%> java程序片段
-	生成成jsp的service方法中
-<%=...%> 输出表达式
-	生成成jsp的service方法中,相当于在java中调用out.print(..)
-<%!...%> 声明成员
-	成员位置.
-```
-
-
-
-### 2、会话技术
+# 1. 会话技术
 
 **会话技术： ** 当用户打开浏览器的时候，访问不同的资源,知道用户将浏览器关闭，可以认为这是一次会话。
 
@@ -44,9 +15,11 @@ jsp：java server pages（java服务器页面）
 - cookie：浏览器端会话技术
 - session：服务器端会话技术
 
-#### 2.1 cookie
+## (1) cookie
 
-> cookie是由服务器生成，通过response将cookie写回浏览器(set-cookie)，保留在浏览器上，下一次访问，浏览器根据一定的规则携带不同的cookie(通过request的头 cookie)，我们服务器就可以接受cookie。
+### cookie介绍
+
+cookie 是由服务器生成，通过 response 将 cookie 写回浏览器(set-cookie)，保留在浏览器上，下一次访问，浏览器根据一定的规则携带不同的 cookie(通过request的头 cookie)，我们服务器就可以接受 cookie。
 
 ``` xml
 cookie的api:
@@ -64,11 +37,9 @@ cookie的常用方法:
     getValue:获取指定cookie的值
 ```
 
-查看浏览器的 cookie：在 chrome 浏览器中，f12 打开调试工具，找到 Console 栏（或者快捷键 `Ctrl+Shift+j`打开 Console 栏），输入`document.cookie() `查看。
+查看浏览器的 cookie：在 chrome 浏览器中，f12 打开调试工具，找到 Console 栏（或快捷键 `Ctrl+Shift+j`打开 Console 栏），输入`document.cookie() `查看。
 
-//////////////////////////////////////////////
-
-案例1-步骤分析：
+### 案例1-网站访问
 
 ``` xml
 1.创建一个serlvet RemServlet 路径:/rem
@@ -91,63 +62,63 @@ cookie的常用方法:
  * 记录上次访问时间
  */
 public class RemServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//0.设置编码
-		response.setContentType("text/html;charset=utf-8");
-		PrintWriter w = response.getWriter();
-		
-		//1.获取指定名称的cookie
-		Cookie c=getCookieByName("lastTime",request.getCookies());
-		
-		//2.判断cookie是否为空
-		if(c == null){
-			//cookie为空 提示 第一次访问
-			w.print("您是第一次访问!");
-		}else{
-			//cookie不为空  获取value 展示 上一次访问的时间
-			String value = c.getValue();// lastTime=12312324234
-			long time = Long.parseLong(value);
-			Date date = new Date(time);
-			w.print("您上次访问时间:"+date.toLocaleString());
-		}
-		
-		//3.将当前访问时间记录
-		//3.1创建cookie
-		c=new Cookie("lastTime",new Date().getTime()+"");
-		
-		//持久化cookie
-		c.setMaxAge(3600);
-		//设置路径
-		c.setPath(request.getContextPath()+"/");//  /day11/
-		
-		//3.2写回浏览器
-		response.addCookie(c);
-	}
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //0.设置编码
+        response.setContentType("text/html;charset=utf-8");
+        PrintWriter w = response.getWriter();
 
-	/**
+        //1.获取指定名称的cookie
+        Cookie c=getCookieByName("lastTime",request.getCookies());
+
+        //2.判断cookie是否为空
+        if(c == null){
+            //cookie为空 提示 第一次访问
+            w.print("您是第一次访问!");
+        }else{
+            //cookie不为空  获取value 展示 上一次访问的时间
+            String value = c.getValue();// lastTime=12312324234
+            long time = Long.parseLong(value);
+            Date date = new Date(time);
+            w.print("您上次访问时间:"+date.toLocaleString());
+        }
+
+        //3.将当前访问时间记录
+        //3.1创建cookie
+        c=new Cookie("lastTime",new Date().getTime()+"");
+
+        //持久化cookie
+        c.setMaxAge(3600);
+        //设置路径
+        c.setPath(request.getContextPath()+"/");//  /day11/
+
+        //3.2写回浏览器
+        response.addCookie(c);
+    }
+
+    /**
 	 * 通过名称在cookie数组获取指定的cookie
 	 * @param name cookie名称
 	 * @param cookies  cookie数组
 	 * @return
 	 */
-	private Cookie getCookieByName(String name, Cookie[] cookies) {
-		if(cookies!=null){
-			for (Cookie c : cookies) {
-				//通过名称获取
-				if(name.equals(c.getName())){
-					//返回
-					return c;
-				}
-			}
-		}
-		return null;
-	}
+    private Cookie getCookieByName(String name, Cookie[] cookies) {
+        if(cookies!=null){
+            for (Cookie c : cookies) {
+                //通过名称获取
+                if(name.equals(c.getName())){
+                    //返回
+                    return c;
+                }
+            }
+        }
+        return null;
+    }
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
-	}
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doGet(request, response);
+    }
 
 }
 ```
@@ -168,15 +139,13 @@ cookie 总结：
         手动设置路径: 以"/项目名"开始,以"/"结尾;
 ```
 
-///////////////////////////////////////////////
+### 案例2-记录用户浏览历史
 
-案例2-记录用户浏览历史
-
-需求：当用户访问一个商品的时候,需要将该商品保留在浏览记录中
+需求：当用户访问一个商品的时候，需要将该商品保留在浏览记录中。
 
 步骤分析：
 
-``` xhtml
+``` markdown
 1.先将product_list.htm转成jsp
 2.点击一个商品,展示该商品的信息,将该商品id记录到cookie  (GetProductById)
 		获取之前的浏览记录 例如名称:ids
@@ -198,9 +167,7 @@ cookie 总结：
 		切割
 ```
 
-////////////////////////////
-
-扩展：删除浏览记录
+### 扩展：删除浏览记录
 
 技术分析：cookie.setMaxAge(0)
 
@@ -225,36 +192,34 @@ cookie 总结：
 
 
 
-#### 2.2 session
+## (2) session
 
-**session：**
+### session介绍
 
-> 服务器端的会话技术。
->
-> 浏览器访问服务器的时候，服务器会获取 jsessionid，
->
-> - 若获取到：要拿着这个 jsessionid 去服务器中（session池）查找有无此 session
->   - 若查找到了：拿过来直接使用，将该 session 的 jsessionid 通过响应返回给浏览器
->   - 若查找不到：创建一个session，将你的数据保存到这个session中，将当前 session 的 jsessionid 返回给浏览器
-> - 若获取不到：创建一个session，将你的数据保存到这个 session 中，将当前 session 的 jsessionid 返回给浏览器
+服务器端的会话技术。
 
-对session的理解：
+浏览器访问服务器的时候，服务器会获取 jsessionid：
 
-> 客户到银行办存蓄卡。客户相当于浏览器，存储卡的卡ID相当于jsessionid，银行相当于服务器，服务器响应给浏览器“存储卡ID”。（session底层依赖cookie）
+- 若获取到：要拿着这个 jsessionid 去服务器中（session池）查找有无此 session
+  - 若查找到了：拿过来直接使用，将该 session 的 jsessionid 通过响应返回给浏览器
+  - 若查找不到：创建一个session，将你的数据保存到这个session中，将当前 session 的 jsessionid 返回给浏览器
+- 若获取不到：创建一个session，将你的数据保存到这个 session 中，将当前 session 的 jsessionid 返回给浏览器
 
-更详细理解阅读网上文章：[Session机制、持久化、session="false"属性不创建session、显示创建session及其销毁](https://blog.csdn.net/u013210620/article/details/52318884)
+对 session 的理解：
 
-////////////////////////////////////////////////////
+> 客户到银行办存蓄卡。客户相当于浏览器，存储卡的卡 ID 相当于 jsessionid，银行相当于服务器，服务器响应给浏览器“存储卡ID”（session 底层依赖 cookie）。
 
-案例3-添加到购物车
+详细参考网上文章：[Session机制、持久化、session="false"属性不创建session、显示创建session及其销毁](https://blog.csdn.net/u013210620/article/details/52318884)
+
+### 案例3-添加到购物车
 
 需求：在商品详情页面有一个添加到购物车，点击则将该商品添加到购物车，点击购物车链接将里面的所有商品展示出来。
 
 技术分析：session
 
-获取一个session：`request.getSession()`
+获取一个 session：`request.getSession()`
 
-``` xhtml
+``` markdown
 jsp页面上增加 <%@ page session="false"%> 才会让你自己 getSession(true)或 getSession()时创建session
  
 1、request.getSession() 等价于 request.getSession(true)
@@ -269,7 +234,7 @@ jsp页面上增加 <%@ page session="false"%> 才会让你自己 getSession(true
 
 - 生命周期：
 
-  - 创建：java程序中第一次使用`request.getsession()`方法的时候创建
+  - 创建：java 程序中第一次使用 `request.getsession()` 方法的时候创建
 
   - 销毁：
 
@@ -284,9 +249,9 @@ jsp页面上增加 <%@ page session="false"%> 才会让你自己 getSession(true
 
 其他域对象：
 
-- ServletContext:共享的数据
-- HttpServletRequest:一次请求的数据
-- HttpSession:私有的数据
+- ServletContext：共享的数据
+- HttpServletRequest：一次请求的数据
+- HttpSession：私有的数据
 
 步骤分析：
 
@@ -375,9 +340,7 @@ public class Add2CartServlet extends HttpServlet {
 }
 ```
 
-/////////////////////////////
-
-案例2-扩展清空购物车:
+### 案例2-扩展清空购物车:
 
 ``` xml
 思路1:将购物车移除

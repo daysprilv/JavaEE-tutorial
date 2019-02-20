@@ -1,0 +1,39 @@
+{
+	
+	"structure": {
+		"readme": "introduction.md"
+	},
+	
+	"plugins": [
+        "github",
+        "github-buttons",
+		"splitter",
+		"latex-codecogs",
+		"atoc",
+		"-highlight", 
+		"prism",
+		"prism-themes"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/strivebo/JavaEE-tutorial"
+        },
+		
+		"atoc": {
+            "addClass": true,
+            "className": "atoc"
+        },
+		"sharing": {
+            "douban": false,
+            "facebook": false,
+			"qzone": true,
+			"weibo": true
+		},
+		"prism": {
+			"css": [
+				"prism-themes/themes/prism-darcula.css"
+			]
+		}
+    }
+	
+}
