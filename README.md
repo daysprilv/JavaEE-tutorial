@@ -1,4 +1,4 @@
-# Java后端学习
+# Java后端升级打怪
 
 这些内容基本都是基于视频学习而作的个人笔记，有的地方是对视频里老师原话的复述，有的地方加上了自己的一点理解，若存在错误，还请各位指出~
 
@@ -9,8 +9,6 @@
 - [Java学习路线图——献给Java初学者_慕课手记](https://www.imooc.com/article/21820)
 - [Java后端工程师学习大纲 - 后端技术杂谈](http://www.rowkey.me/blog/2016/06/27/java-backend-study/?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
 - ……
-
-
 
 ## 学习视频
 
@@ -29,6 +27,8 @@
 ……
 
 
+
+在线阅读：[传送门](https://javaee.strivebo.com)
 
 
 
