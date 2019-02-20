@@ -12,7 +12,7 @@
 
 ## 学习视频
 
-（1）PartⅠ -  Java基础篇，学习于：
+（1）Part Ⅰ -  Java基础篇，学习于：
 
 - 《尚硅谷官网视频 - 基础阶段 》链接: https://pan.baidu.com/s/1hBjlBCw1FyygspMN-OYcyA 提取码: y3v4
 
@@ -28,7 +28,7 @@
 
 
 
-在线阅读：[传送门](https://javaee.strivebo.com)
+:point_right: ​在线阅读：[传送门](https://javaee.strivebo.com)
 
 
 
