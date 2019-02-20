@@ -32,11 +32,19 @@
 
 ## 联系我
 
-个人博客：<https://www.strivebo.com>
+博客：<https://www.strivebo.com>
+
+GitHub：https://github.com/strivebo
 
 联系邮箱：<ishuzb@foxmail.com>
 
 
+
+## 赞赏
+
+觉得对您学习有点帮助请我喝杯咖啡吧(*￣︶￣)
+
+![](./img/award-400x400.png)
 
 ---
 
