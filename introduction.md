@@ -44,7 +44,7 @@ GitHub：https://github.com/strivebo
 
 觉得对您学习有点帮助请我喝杯咖啡吧(*￣︶￣)
 
-![](./img/award-400x400.png)
+![](./img/award-300x300.png)
 
 ---
 
