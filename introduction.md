@@ -14,15 +14,15 @@
 
 ## 学习视频
 
-（1）Part Ⅰ -  Java基础篇，学习于：
+(1) Part Ⅰ -  Java基础篇，学习于：
 
 - 《尚硅谷官网视频 - 基础阶段 》链接: https://pan.baidu.com/s/1hBjlBCw1FyygspMN-OYcyA 提取码: y3v4
 
-（2）Part Ⅱ - JavaWeb篇， 学习于：
+(2) Part Ⅱ - JavaWeb篇， 学习于：
 
 - 《黑马程序员_30天轻松掌握JavaWeb视频》链接: https://pan.baidu.com/s/1PpzeSK4qffHODZHadHkqyw 提取码: pfro
 
-（3）Part Ⅲ - 框架篇，学习于：
+(3) Part Ⅲ - 框架篇，学习于：
 
 - 《2017黑马java基础班+就业班》链接: https://pan.baidu.com/s/1-HNGnhdkzxLXhsKiIXHN8g 提取码: 14d
 
@@ -33,7 +33,7 @@
 ## 联系我
 
 - 博客：<https://www.strivebo.com>
-- GitHub：[源文阅读](https://github.com/strivebo/JavaEE-tutorial)
+- GitHub：[源文阅读](https://github.com/strivebo/JavaEE-tutorial)   
 - 联系邮箱：<ishuzb@foxmail.com>
 
 
