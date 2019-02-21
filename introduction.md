@@ -1,6 +1,10 @@
-# Java后端升级打怪
+<p align="center" style="font-size:44px;font-weight:bold;">
+    Java后端升级打怪
+</p>
 
 这些内容基本都是基于视频学习而作的个人笔记，有的地方是对视频里老师原话的复述，有的地方加上了自己的一点理解，若存在错误，还请各位指出~
+
+另外，目前只学了 Java 基础、JavaWeb、SSM 框架这些，还有很多内容没有学，待日后有时间去学习和补充哈，以后会更新的~
 
 关于 Java 后端学习路线，以及如何学？参考网上：
 
@@ -33,7 +37,7 @@
 ## 联系我
 
 - 博客：<https://strivebo.com>
-- GitHub：[源文阅读](https://github.com/strivebo/JavaEE-tutorial)   
+- GitHub：[源文阅读](https://github.com/strivebo/JavaEE-tutorial)  还会更新的，欢迎 star~  
 - 联系邮箱：<ishuzb@foxmail.com>
 
 
