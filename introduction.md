@@ -32,7 +32,7 @@
 
 ## 联系我
 
-- 博客：<https://www.strivebo.com>
+- 博客：<https://strivebo.com>
 - GitHub：[源文阅读](https://github.com/strivebo/JavaEE-tutorial)   
 - 联系邮箱：<ishuzb@foxmail.com>
 
