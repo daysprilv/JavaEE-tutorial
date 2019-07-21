@@ -37,7 +37,7 @@
 ## 联系我
 
 - 博客：<https://strivebo.com>
-- GitHub：[源文阅读](https://github.com/strivebo/JavaEE-tutorial)  还会更新的，欢迎 star~  
+- GitHub：[源文阅读](https://github.com/strivebo/JavaEE-tutorial)  还会更新的，欢迎 star 
 - 联系邮箱：<ishuzb@foxmail.com>
 
 
@@ -50,4 +50,4 @@
 
 ---
 
-*update：2019-07-21*
+*update：2019-09-21*
