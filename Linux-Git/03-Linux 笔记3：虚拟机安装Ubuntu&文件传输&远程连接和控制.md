@@ -4,25 +4,25 @@
 
 1、VMware 是什么？
 
-> 威睿（英语：VMware, Inc.）是一家全球著名的软件公司，它提供云计算和硬件虚拟化的软件和服务，并号称是第一个商业化的成功的虚拟化的x86架构。公司成立于1998年，VMware的总部设在加利福尼亚州帕洛阿尔托。2004年，威睿被易安信公司收购控股持有，然后，在2007年8月14日，易安信公司在纽约证券交易所上市公司所出售的15％控股。该公司在符号VMW下交易。——*摘自[维基百科](https://zh.wikipedia.org/zh-hans/VMware)*
+威睿（英语：VMware, Inc.）是一家全球著名的软件公司，它提供云计算和硬件虚拟化的软件和服务，并号称是第一个商业化的成功的虚拟化的x86架构。公司成立于1998年，VMware的总部设在加利福尼亚州帕洛阿尔托。2004年，威睿被易安信公司收购控股持有，然后，在2007年8月14日，易安信公司在纽约证券交易所上市公司所出售的15％控股。该公司在符号VMW下交易。——*摘自[维基百科](https://zh.wikipedia.org/zh-hans/VMware)*
 
-2、VMware Workstation
+2、VMware Workstation 
 
-> VMware Workstation是VMware公司销售的商业软件产品之一。该工作站软件包含一个用于英特尔x86相容电脑的虚拟机套装，其允许用户同时创建和运行多个x86虚拟机。每个虚拟机可以运行其安装的操作系统，如（但不限于）Windows、Linux、BSD变生版本。用简单术语来描述就是，VMware Workstation允许一台真实的电脑在一个作业系统中同时开启并运行数个操作系统，其它VMware产品帮助在多个宿主电脑之间管理或移植VMware虚拟机。免费版本为VMware Workstation Player。——*摘自[维基百科](https://zh.wikipedia.org/zh-hans/VMware)*
+VMware Workstation是VMware公司销售的商业软件产品之一。该工作站软件包含一个用于英特尔x86相容电脑的虚拟机套装，其允许用户同时创建和运行多个x86虚拟机。每个虚拟机可以运行其安装的操作系统，如（但不限于）Windows、Linux、BSD变生版本。用简单术语来描述就是，VMware Workstation允许一台真实的电脑在一个作业系统中同时开启并运行数个操作系统，其它VMware产品帮助在多个宿主电脑之间管理或移植VMware虚拟机。免费版本为VMware Workstation Player。——*摘自[维基百科](https://zh.wikipedia.org/zh-hans/VMware)*
 
 3、Ubuntu 简介
 
-> Ubuntu（友帮拓、优般图、乌班图）是一个以桌面应用为主的开源GNU/Linux操作系统，Ubuntu 是基于Debian GNU/Linux，支持x86、amd64（即x64）和ppc架构，由全球化的专业开发团队（Canonical Ltd）打造的。
->
-> 其名称来自非洲南部祖鲁语或豪萨语的“ubuntu”一词，类似儒家“仁爱”的思想，意思是“人性”、“我的存在是因为大家的存在”，是非洲传统的一种价值观。
->
-> Ubuntu基于Debian发行版和GNOME桌面环境，而从11.04版起，Ubuntu发行版放弃了Gnome桌面环境，改为Unity，与Debian的不同在于它每6个月会发布一个新版本。Ubuntu的目标在于为一般用户提供一个最新的、同时又相当稳定的主要由自由软件构建而成的操作系统。Ubuntu具有庞大的社区力量，用户可以方便地从社区获得帮助。 Ubuntu对GNU/Linux的普及特别是桌面普及作出了巨大贡献，由此使更多人共享开源的成果与精彩。
->
-> 2013年1月3日，Ubuntu正式发布面向智能手机的移动操作系统。
->
-> ubuntu基于linux的免费开源桌面PC操作系统，十分契合英特尔的超极本定位，支持x86、64位和ppc架构。
->
-> ——*摘自[百度百科](https://baike.baidu.com/item/Ubuntu)*
+Ubuntu（友帮拓、优般图、乌班图）是一个以桌面应用为主的开源GNU/Linux操作系统，Ubuntu 是基于Debian GNU/Linux，支持x86、amd64（即x64）和ppc架构，由全球化的专业开发团队（Canonical Ltd）打造的。
+
+其名称来自非洲南部祖鲁语或豪萨语的“ubuntu”一词，类似儒家“仁爱”的思想，意思是“人性”、“我的存在是因为大家的存在”，是非洲传统的一种价值观。
+
+Ubuntu基于Debian发行版和GNOME桌面环境，而从11.04版起，Ubuntu发行版放弃了Gnome桌面环境，改为Unity，与Debian的不同在于它每6个月会发布一个新版本。Ubuntu的目标在于为一般用户提供一个最新的、同时又相当稳定的主要由自由软件构建而成的操作系统。Ubuntu具有庞大的社区力量，用户可以方便地从社区获得帮助。 Ubuntu对GNU/Linux的普及特别是桌面普及作出了巨大贡献，由此使更多人共享开源的成果与精彩。
+
+2013年1月3日，Ubuntu正式发布面向智能手机的移动操作系统。
+
+ubuntu基于linux的免费开源桌面PC操作系统，十分契合英特尔的超极本定位，支持x86、64位和ppc架构。
+
+——*摘自 [百度百科](https://baike.baidu.com/item/Ubuntu)*
 
 ### 1.2 安装步骤
 
@@ -203,7 +203,7 @@ VMware Workstation 中选择「打开虚拟机」，如图：
 
 ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-9-14-19153652.jpg)
 
-然后选择后缀`.ovf`文件就可以成功导入系统了。
+然后选择后缀 `.ovf` 文件就可以成功导入系统了。
 
 > 补充：OVF 是一种虚拟机打包和分发格式，具有独立于平台、高效、可扩展且开放的特点。OVF 格式提供了完整的虚拟机规范，包括所需虚拟磁盘和所需虚拟硬件配置的完整列表。虚拟硬件配置包括 CPU、内存、网络和存储。管理员无需干预或只需进行极少干预，即可快速置备 OVF 格式的虚拟机。
 
