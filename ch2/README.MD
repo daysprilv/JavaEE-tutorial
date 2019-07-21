@@ -1,9 +1,7 @@
 <p align="center" style="font-size:44px;font-weight:bold;">
     Part Ⅱ：JavaWeb篇
 </p>
-
-
-目录：
+# 目录
 
 - [01-HTML](ch2/01-HTML.md)
 - [02-CSS](ch2/02-CSS.md)

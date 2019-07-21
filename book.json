@@ -1,39 +1,100 @@
 {
-	
-	"structure": {
-		"readme": "introduction.md"
+	"title": "JAVA后端升级打怪",
+    "description": "JAVA后端技术栈学习记录",
+    "author": "Jaybo",
+    "language": "zh-hans",
+    "gitbook": "3.2.2",
+    "structure":{
+        "readme":"introduction.md"
+    },
+	"links": {
+        "sidebar": {
+            "HOME": "http://strivebo.com"
+        }
+    },
+	"styles": {
+		"website": "",
+		"ebook": "",
+		"pdf": "",
+		"mobi": "",
+		"epub": ""
 	},
-	
-	"plugins": [
-        "github",
+    "plugins":[
+		"atoc",
+        "latex-codecogs",
+		"anchor-navigation-ex",
+		"back-to-top-button",
+		"code",
+		"copy-code-button",
+		"-lunr", "-search", "search-pro",
+		"github", 
         "github-buttons",
 		"splitter",
-		"latex-codecogs",
-		"atoc",
-		"-highlight", 
-		"prism",
-		"prism-themes"
+		"-sharing", "sharing-plus",
+		"klipse",
+		"pageview-count",
+		"auto-scroll-table",
+		"lightbox",
+		"disqus",
+		"-highlight", "prism", "prism-themes",
+		"ace",
+		"katex",
+		"anchors",
+		"edit-link"
     ],
-    "pluginsConfig": {
-        "github": {
-            "url": "https://github.com/strivebo/JavaEE-tutorial"
+    "pluginsConfig":{
+        "github":{
+            "url":"https://github.com/strivebo/JavaEE-tutorial"
         },
-		
-		"atoc": {
-            "addClass": true,
-            "className": "atoc"
+		"github-buttons": {
+            "repo": "strivebo/JavaEE-tutorial",
+            "types": [
+                "star",
+                "watch",
+                "fork"
+            ],
+            "size": "small"
         },
-		"sharing": {
+        "atoc":{
+            "addClass":true,
+            "className":"atoc"
+        },
+        "sharing":
+        {
             "douban": false,
             "facebook": false,
-			"qzone": true,
-			"weibo": true
+            "google": false,
+            "hatenaBookmark": false,
+            "instapaper": false,
+            "line": false,
+            "linkedin": false,
+            "messenger": false,
+            "pocket": false,
+            "qq": true,
+            "qzone": true,
+            "stumbleupon": false,
+            "twitter": false,
+            "viber": false,
+            "vk": false,
+            "weibo": true,
+            "whatsapp": false,
+            "all": [
+                "facebook", "google", "twitter",
+                "weibo", "qq", "linkedin",
+                "qzone", "douban"
+            ]
+        },
+		"edit-link": {
+			"base": "https://github.com/strivebo/JavaEE-tutorial/edit/master",
+			"label": "Edit This Page"
+		},
+		"disqus": {
+			"shortName": "jaybo"
 		},
 		"prism": {
 			"css": [
-				"prism-themes/themes/prism-darcula.css"
+				"prismjs/themes/prism-solarizedlight.css"
 			]
 		}
     }
-	
 }

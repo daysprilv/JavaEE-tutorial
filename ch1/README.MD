@@ -1,9 +1,7 @@
 <p align="center" style="font-size:44px;font-weight:bold;">
     Part Ⅰ：Java基础篇
 </p>
-
-
-目录：
+# 目录
 
 - [01-Java语言概述](ch1/01-Java语言概述.md)
 - [02-Java基本语法](ch1/02-Java基本语法.md)
