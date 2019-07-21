@@ -1,6 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    Maven 笔记1：入门演示
-</p>
 
 ## 一、Maven介绍
 

@@ -1,6 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    08-HTTP&Servlet
-</p>
 
 # 1. HTTP(超文本传输协议)
 
@@ -1052,7 +1049,7 @@ request:请求 获取浏览器发送过来的数据
 
 # 5. 优质博文学习
 
-[servlet就是这么简单](https://mp.weixin.qq.com/s/JLhi3Lvr5fruanDXGnXmSg)（servlet 相关知识点总结的不错，并且有代码演示~）
+[servlet就是这么简单](https://mp.weixin.qq.com/s/JLhi3Lvr5fruanDXGnXmSg) - Servlet 相关知识点总结的不错，并且有代码演示。
 
 
 

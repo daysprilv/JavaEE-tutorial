@@ -1,6 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    07-XML&Tomcat&反射
-</p>
 
 # 1. XML(可扩展的标记语言)
 

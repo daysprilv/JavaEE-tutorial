@@ -1,6 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    13-Java反射机制
-</p>
 
 # 0. 反射
 

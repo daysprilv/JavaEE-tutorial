@@ -1,6 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    01-HTML
-</p>
 
 # 1. HTML介绍
 

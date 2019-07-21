@@ -1,6 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    12-Java常用类
-</p>
 
 # 1. String类
 

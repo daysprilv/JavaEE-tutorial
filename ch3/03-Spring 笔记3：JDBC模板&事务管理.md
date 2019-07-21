@@ -1,8 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    Spring 笔记3：JDBC模板&事务管理
-</p>
-
-
 
 ## 前言
 

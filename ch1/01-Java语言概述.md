@@ -1,6 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    01-Java语言概述
-</p>
 
 # 1. Java语言的诞生、特点
 

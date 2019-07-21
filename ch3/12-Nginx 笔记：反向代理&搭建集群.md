@@ -1,6 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    Nginx 笔记：反向代理&搭建集群
-</p>
 
 ## 一、前言
 

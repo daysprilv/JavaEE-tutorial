@@ -1,10 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    Spring 笔记1：IOC及XML方式&依赖注入
-</p>
-
-
-
-
 ## 前言
 
 **Spring框架的学习路线：**

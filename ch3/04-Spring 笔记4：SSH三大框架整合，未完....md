@@ -1,8 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    Spring 笔记4：SSH三大框架整合，未完...
-</p>
-
-
 
 ## 前言
 

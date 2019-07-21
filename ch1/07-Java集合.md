@@ -1,6 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    07-Java集合
-</p>
 
 # 1. 集合概述
 

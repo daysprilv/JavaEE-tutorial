@@ -9,7 +9,7 @@
     },
 	"links": {
         "sidebar": {
-            "HOME": "http://strivebo.com"
+            
         }
     },
 	"styles": {
@@ -20,7 +20,6 @@
 		"epub": ""
 	},
     "plugins":[
-		"atoc",
         "latex-codecogs",
 		"anchor-navigation-ex",
 		"back-to-top-button",
@@ -39,7 +38,6 @@
 		"-highlight", "prism", "prism-themes",
 		"ace",
 		"katex",
-		"anchors",
 		"edit-link"
     ],
     "pluginsConfig":{
@@ -54,10 +52,6 @@
                 "fork"
             ],
             "size": "small"
-        },
-        "atoc":{
-            "addClass":true,
-            "className":"atoc"
         },
         "sharing":
         {

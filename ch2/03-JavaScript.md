@@ -1,6 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    03-JavaScript
-</p>
 
 # 1. JavaScript介绍
 
@@ -119,7 +116,7 @@ JavaScript 操作：
    做法：	
   1. 将 js 代码放在 html 页面的最下面
   2. 在页面加载成功之后在运行 js 代码  onload 事件.
-    ​
+      ​
 
 # 3. BOM(浏览器对象模型)
 

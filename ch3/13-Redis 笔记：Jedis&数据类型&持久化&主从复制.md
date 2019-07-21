@@ -1,6 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    Redis 笔记：Jedis&数据类型&持久化&主从复制
-</p>
 
 ## 一、redis介绍
 

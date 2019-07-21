@@ -1,8 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    MyBatis 笔记3：逆向工程
-</p>
-
-
 
 ## 一、Mybatis逆向工程
 

@@ -50,6 +50,8 @@
 
 - [Part Ⅳ：项目实战](ch4/README.md)
 
-- [Part Ⅴ：高级专题](ch5/README.md)
+- [Part Ⅴ：微服务等](ch5/README.md)
 
-- [Linux&Git专题](Linux-Git/README.md)
+- [Part Ⅴ：Java虚拟机/并发等](ch6/README.md)
+
+- [Linux&Git学习](Linux-Git/README.md)

@@ -1,6 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    04-JQuery
-</p>
 
 # 1. JQuery 基础
 

@@ -1,8 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    SpringMVC 笔记2：高级参数绑定&Restful&拦截器
-</p>
-
-
 
 ## 前言
 

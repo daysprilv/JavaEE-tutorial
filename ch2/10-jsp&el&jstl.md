@@ -1,6 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    10-JSP&EL&JSTL
-</p>
 
 # 1. JSP(Java服务器页面)
 

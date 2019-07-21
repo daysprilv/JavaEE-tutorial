@@ -1,6 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    Maven 笔记2：依赖管理&项目拆分&私服搭建
-</p>
 
 ## 一、依赖管理
 

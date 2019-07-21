@@ -1,6 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    06-JDBC&装饰者模式
-</p>
 
 # 1. 什么是JDBC
 

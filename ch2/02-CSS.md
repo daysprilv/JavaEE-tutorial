@@ -1,6 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    02-CSS
-</p>
 
 # 1. CSS介绍
 

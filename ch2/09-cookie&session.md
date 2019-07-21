@@ -1,6 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    09-Cookie&Session
-</p>
 
 # 1. 会话技术
 

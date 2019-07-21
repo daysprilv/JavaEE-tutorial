@@ -1,10 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    SpringMVC 笔记1：整合Mybatis&参数绑定
-</p>
-
-
-
-
 ## 前言
 
 SpringMVC 第一天学习大纲：

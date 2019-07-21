@@ -1,6 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    关于Eclipse配置及项目发布问题
-</p>
 
 # 1. 关于导包和Eclipse中Build Path的问题
 

@@ -1,8 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    MyBatis 笔记2：映射&动态sql&关联查询&整合Spring
-</p>
-
-
 
 ## 前言
 

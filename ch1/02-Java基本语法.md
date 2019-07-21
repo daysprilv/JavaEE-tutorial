@@ -1,6 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    02-Java基本语法
-</p>
 
 # 1. 关键字
 

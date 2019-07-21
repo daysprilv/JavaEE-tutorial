@@ -1,8 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    Spring 笔记2：IOC注解方式&AOP
-</p>
-
-
 
 ## 前言
 

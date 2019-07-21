@@ -1,8 +1,3 @@
-<p align="center" style="font-size:44px;font-weight:bold;">
-    MyBatis 笔记1：开发入门
-</p>
-
-
 
 ## 前言
 
