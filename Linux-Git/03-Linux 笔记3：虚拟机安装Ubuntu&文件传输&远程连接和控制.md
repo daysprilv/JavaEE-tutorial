@@ -4,11 +4,11 @@
 
 1、VMware 是什么？
 
-威睿（英语：VMware, Inc.）是一家全球著名的软件公司，它提供云计算和硬件虚拟化的软件和服务，并号称是第一个商业化的成功的虚拟化的x86架构。公司成立于1998年，VMware的总部设在加利福尼亚州帕洛阿尔托。2004年，威睿被易安信公司收购控股持有，然后，在2007年8月14日，易安信公司在纽约证券交易所上市公司所出售的15％控股。该公司在符号VMW下交易。——*摘自[维基百科](https://zh.wikipedia.org/zh-hans/VMware)*
+威睿（英语：VMware, Inc.）是一家全球著名的软件公司，它提供云计算和硬件虚拟化的软件和服务，并号称是第一个商业化的成功的虚拟化的x86架构。公司成立于1998年，VMware的总部设在加利福尼亚州帕洛阿尔托。2004年，威睿被易安信公司收购控股持有，然后，在2007年8月14日，易安信公司在纽约证券交易所上市公司所出售的15％控股。该公司在符号VMW下交易。——from：[维基百科](https://zh.wikipedia.org/zh-hans/VMware)
 
 2、VMware Workstation 
 
-VMware Workstation是VMware公司销售的商业软件产品之一。该工作站软件包含一个用于英特尔x86相容电脑的虚拟机套装，其允许用户同时创建和运行多个x86虚拟机。每个虚拟机可以运行其安装的操作系统，如（但不限于）Windows、Linux、BSD变生版本。用简单术语来描述就是，VMware Workstation允许一台真实的电脑在一个作业系统中同时开启并运行数个操作系统，其它VMware产品帮助在多个宿主电脑之间管理或移植VMware虚拟机。免费版本为VMware Workstation Player。——*摘自[维基百科](https://zh.wikipedia.org/zh-hans/VMware)*
+VMware Workstation是VMware公司销售的商业软件产品之一。该工作站软件包含一个用于英特尔x86相容电脑的虚拟机套装，其允许用户同时创建和运行多个x86虚拟机。每个虚拟机可以运行其安装的操作系统，如（但不限于）Windows、Linux、BSD变生版本。用简单术语来描述就是，VMware Workstation允许一台真实的电脑在一个作业系统中同时开启并运行数个操作系统，其它VMware产品帮助在多个宿主电脑之间管理或移植VMware虚拟机。免费版本为VMware Workstation Player。——from：[维基百科](https://zh.wikipedia.org/zh-hans/VMware)
 
 3、Ubuntu 简介
 
@@ -52,7 +52,7 @@ ubuntu基于linux的免费开源桌面PC操作系统，十分契合英特尔的�
 
 2、安装过程
 
-①笔者下载的版本为 VMware Workstation 14 Pro，如图：
+①本人下载的版本为 VMware Workstation 14 Pro，如图：
 
 ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-9-13-19901436.jpg)
 
@@ -71,7 +71,7 @@ YC592-8VF55-M81AZ-FWW5T-WVRV0
 YF5XA-62G0P-48EDP-U4WEG-YPKZF
 ```
 
-② 笔者 Ubuntu 下载的为：`ubuntu-16.04-desktop-amd64.iso`
+② 本人 Ubuntu 下载的为：`ubuntu-16.04-desktop-amd64.iso`
 
 使用 VMware 虚拟机安装 Ubuntu 详细过程如下。可参考：[VMware Ubuntu安装详细过程](https://blog.csdn.net/u013142781/article/details/50529030)
 
@@ -113,11 +113,11 @@ YF5XA-62G0P-48EDP-U4WEG-YPKZF
 
 ### 1.3 ubuntu常用操作
 
-☛ubuntu 使用指南：https://help.ubuntu.com/
+ubuntu 使用指南：https://help.ubuntu.com/
 
 - 改变ubuntu 16.04 菜单栏位置到底部，终端下输入命令：`gsettings set com.canonical.Unity.Launcher launcher-position Bottom`；恢复到原来的左侧命令：`gsettings set com.canonical.Unity.Launcher launcher-position Left`
 
-☛ubuntu 常用命令介绍下：
+ubuntu 常用命令介绍下：
 
 ①权限有关
 
@@ -140,13 +140,13 @@ YF5XA-62G0P-48EDP-U4WEG-YPKZF
 
 - `sudo passwd`或`sudo passwd root`：设置 root 密码。
 
-☛VMware 虚拟机下安装的 ubuntu 的一些常用快捷键：
+VMware 虚拟机下安装的 ubuntu 的一些常用快捷键：
 
 - Ctrl+Alt+Enter：全屏
 - 取消独占模式：Ctrl+Alt
 
 
-☛ubuntu 常用的快捷键：
+ubuntu 常用的快捷键：
 
 ①桌面
 
@@ -181,7 +181,7 @@ YF5XA-62G0P-48EDP-U4WEG-YPKZF
 
 使用 VMware Workstation 导出安装的系统，下次就算换了电脑也可导入到别的 VMware 中使用了。
 
-1、导出
+#### 1.4.1 导出
 
 先选中需要导出的系统，如图：
 
@@ -197,7 +197,13 @@ YF5XA-62G0P-48EDP-U4WEG-YPKZF
 
 ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-9-14-92316285.jpg)
 
-2、导入
+这里提下，如上图看到的有个 `Ubuntu_64位2-file1.iso` 文件，其实是来自（如下图）：
+
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190725200331.png)
+
+**建议在导出的时候删除掉（导入的时候不会受此影响）。**删除掉后，再进行导出，就只会有这三个 `.ovf`、`.vmdk`、`.mf` 格式文件。
+
+#### 1.4.2 导入
 
 VMware Workstation 中选择「打开虚拟机」，如图：
 
@@ -207,7 +213,71 @@ VMware Workstation 中选择「打开虚拟机」，如图：
 
 > 补充：OVF 是一种虚拟机打包和分发格式，具有独立于平台、高效、可扩展且开放的特点。OVF 格式提供了完整的虚拟机规范，包括所需虚拟磁盘和所需虚拟硬件配置的完整列表。虚拟硬件配置包括 CPU、内存、网络和存储。管理员无需干预或只需进行极少干预，即可快速置备 OVF 格式的虚拟机。
 
+若是导入碰到提示“导入失败”，提示类似如下这样：
 
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190725210801.png)
+
+不用在意，点击“重试”即可。
+
+我在实践过程，发现导入进来之后，点击虚拟机系统，都有**“升级此虚拟机”**字样，这里可以忽略，或者你也可以打开系统的 vmx 配置文件，修改 virtualhw.version 的值为 14。关于什么是 vmx 文件，下面有讲到。
+
+##### 导入 macOS 出现的问题：Attempting to start up from
+
+我有在 VMware pro 14.0 虚拟机下安装 macOS 10.13，参考：[VMware 15 安装 MAC OS 10.13 原版（详细图文教程） - CSDN博客](<https://blog.csdn.net/qq_40147863/article/details/84797618>)，文章也有提到安装可能会遇到的问题，这里不多讲了。
+
+这里得提下，在导入 macOS 到虚拟机遇到的问题。
+
+**问题1：**
+
+在导入 macOS 后，会报：
+
+``` 
+VMware Workstation 不可恢复错误: (vcpu-0)
+```
+
+这样的错误。**下面是解决办法：**
+
+1. 打开选择的系统的那个目录，找到 wmx 为后缀名的文件，用编辑器打开；
+
+2. 找到 smc.present = “TRUE” 那一行，下面添加一行，内容为：
+
+   ```
+   smc.version = 0
+   ```
+
+这里提下 vmx 文件：
+
+> vmx 文件是 vmware 安装虚拟系统后，生成的虚拟机配置文件。可以用普通的文本编辑器编辑，其中保存着虚拟机的各项软硬件配置信息，诸如硬盘，光盘，网卡，虚拟机名等配置信息。
+
+**问题2：**
+
+解决问题1 后，点击启动系统，然后报了如下类似错误：
+
+```
+Attempting to start up from
+EFI VMware Virtual SATA CDROM Drive (1.0) … unsuccessful.
+
+```
+
+网上找到了该问题解决方式，很多都有提到该解决方式：
+
+```
+1. 在虚拟机的安装目录里找到vmx文件
+2. 删掉里面的 firmware="efi"
+3. 保存重启虚拟机即可正常安装
+```
+
+但实测，按照如上方法，并没解决问题。后通过自己的倒腾，找到了解决办法。操作很简单：
+
+1. 找到导入进来 macOS 后对应的 vmx 文件。
+
+2. 然后修改 guestOS 值为 darwin17-64：
+
+   ```
+   guestOS = "darwin17-64"
+   ```
+
+即可解决该问题。我猜测是因为在开始安装 macOS 系统，使用了 darwin.iso 文件缘故。
 
 ## 二、SSH远程连接ubuntu
 
@@ -217,7 +287,7 @@ VMware 虚拟机下安装完 Ubuntu 系统就可以开始使用了！
 
 这里还有一篇写的很清楚，推荐阅读：[最佳实践：使用SSH连接Linux服务器](https://www.jianshu.com/p/59c4fc2684be)。
 
-简单说，SSH（Secure Shell，安全外壳协议） 是一种网络协议，用于计算机之间的加密登录。存在多种实现，既有商业实现，也有开源实现。建议好好理解下 SSH 协议原理，HTTPS 协议也有相关知识点，改天有时间笔者再好好写篇关于 HTTPS 的认识吧。
+简单说，SSH（Secure Shell，安全外壳协议） 是一种网络协议，用于计算机之间的加密登录。存在多种实现，既有商业实现，也有开源实现。建议好好理解下 SSH 协议原理，HTTPS 协议也有相关知识点，改天有时间我再好好写篇关于 HTTPS 的认识吧。
 
 > 注：使用 Git 在 GitHub 进行多人合作代码管理等操作之前，一般也会配置 SSH 公钥私钥，这样每次提交代码就不用输入账户和密码。
 
@@ -414,7 +484,7 @@ $ssh -p[端口号] [user]@[ip]
 
 > 如果你的机器没有启动 openssh-server，那么别人就连接不了你的机器，也没法从你的机器拷贝文件，但是你可以连别的开启了 openssh-server 的机器，也可以拷贝文件，因为你本机的 openssh-client 安装后就默认打开。
 
-因为笔者安装过 PuTTY，自带 pscp，该工具可以命令行下通过 SSH 拷贝文件。如果是只下载了单个 pscp 工具，可以将其放入 windows 的 system32 文件夹下，这样在 dos 命令窗口中就能直接调用使用了。
+因为本人安装过 PuTTY，自带 pscp，该工具可以命令行下通过 SSH 拷贝文件。如果是只下载了单个 pscp 工具，可以将其放入 windows 的 system32 文件夹下，这样在 dos 命令窗口中就能直接调用使用了。
 
 要传送文件的时候，假设你要将 Windows 下的 `d:/test.txt` 传到 IP 为 `192.168.109.128` 的 Linux 机器的 `/home/user1 `文件夹下，假设 Linux 机器的端口是 22，用户名是：user1，那么从 Windows 下打开 cmd：
 
@@ -546,7 +616,7 @@ VNC 基本上是由两部分组成：一部分是客户端的应用程序（vncv
 
 ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-9-13-22175592.jpg)
 
-2、Ctrl+Alt+T 快捷键打开终端，安装 vncserver 的基础服务，输入命令：`sudo apt-get install xrdp vnc4server xbase-clients`，因笔者我已经安装过了，所以出现如下：
+2、Ctrl+Alt+T 快捷键打开终端，安装 vncserver 的基础服务，输入命令：`sudo apt-get install xrdp vnc4server xbase-clients`，因本人我已经安装过了，所以出现如下：
 
 ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-9-13-20778877.jpg)
 
@@ -564,7 +634,7 @@ VNC 基本上是由两部分组成：一部分是客户端的应用程序（vncv
 
 #### 3.2.3 远程控制
 
-获取当前的 IP 地址，在 ubuntu 终端下输入：`ifconfig` 即可得到，笔者虚拟机下的 ubuntu 的 IP 地址为：`192.168.109.128`
+获取当前的 IP 地址，在 ubuntu 终端下输入：`ifconfig` 即可得到，本人虚拟机下的 ubuntu 的 IP 地址为：`192.168.109.128`
 
 ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-9-13-64377565.jpg)
 

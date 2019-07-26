@@ -47,7 +47,7 @@
   - [其他(待更…)]()
 - [Part Ⅳ：项目实战](ch4/README.md)
 - [Part Ⅴ：微服务等](ch5/README.md)
-- [Part Ⅴ：Java虚拟机/并发等](ch6/README.md)
+- [Part VI：Java虚拟机/并发等](ch6/README.md)
 - [Linux&Git学习](Linux-Git/README.md)
   - [Linux 笔记1：常用命令&Vim编辑器&用户和组&权限](Linux-Git/01-Linux 笔记1：常用命令&Vim编辑器&用户和组&权限.md)
   - [Linux 笔记2：软件安装方式总结](Linux-Git/02-Linux 笔记2：软件安装方式总结.md)

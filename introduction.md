@@ -1,6 +1,6 @@
 # Java后端升级打怪
 
-## 写在前面
+## 前言
 
 这些笔记大部分是基于视频教程的个人学习记录，有的地方是对视频里老师原话的复述，有的地方加上了自己的一点理解，若存在错误，还请各位大侠指出哈。
 
@@ -16,17 +16,17 @@
 
 
 
-## 学习资料
+## 资料
 
-(1) Part Ⅰ：Java基础篇。学习于：
+(1) Java基础篇
 
 - 《尚硅谷官网视频 - 基础阶段 》链接: https://pan.baidu.com/s/1hBjlBCw1FyygspMN-OYcyA 提取码: y3v4
 
-(2) Part Ⅱ：JavaWeb篇。学习于：
+(2) JavaWeb篇
 
 - 《黑马程序员_30天轻松掌握JavaWeb视频》链接: https://pan.baidu.com/s/1PpzeSK4qffHODZHadHkqyw 提取码: pfro
 
-(3) Part Ⅲ：框架篇。学习于：
+(3) 框架篇
 
 - 《2017黑马java基础班+就业班》链接: https://pan.baidu.com/s/1-HNGnhdkzxLXhsKiIXHN8g 提取码: 14d
 
@@ -36,15 +36,14 @@
 
 ## 联系我
 
-- 博客：<https://strivebo.com>
-- GitHub：[源文阅读](https://github.com/strivebo/JavaEE-tutorial)  还会更新的，欢迎 star 
+- GitHub：[源文阅读](https://github.com/strivebo/JavaEE-tutorial)，会更新的，欢迎 star 
 - 联系邮箱：<ishuzb@foxmail.com>
 
 
 
 ## 赞赏
 
-觉得对您学习有点帮助请我喝杯咖啡吧(*￣︶￣)
+要是觉得对您有点帮助请我喝杯咖啡吧(*￣︶￣)
 
 ![](./img/award_geizan-300x300.png)
 

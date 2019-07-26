@@ -1,6 +1,6 @@
 # Java后端升级打怪
 
-## 写在前面
+## 前言
 
 这些笔记大部分是基于视频教程的个人学习记录，有的地方是对视频里老师原话的复述，有的地方加上了自己的一点理解，若存在错误，还请各位大侠指出哈。
 
@@ -16,17 +16,79 @@
 
 
 
-## 学习资料
+## 目录
 
-(1) Part Ⅰ：Java基础篇。学习于：
+- [Part Ⅰ：Java基础篇](ch1/README.md)
+  - [01-Java语言概述](ch1/01-Java语言概述.md)
+  - [02-Java基本语法](ch1/02-Java基本语法.md)
+  - [03-面向对象编程（一）](ch1/03-面向对象编程（一）.md)
+  - [04-面向对象编程（二）](ch1/04-面向对象编程（二）.md)
+  - [05-面向对象编程（三）](ch1/05-面向对象编程（三）.md)
+  - [小结：01-05章](ch1/06-小结：01-05章.md)
+  - [06-异常处理](ch1/06-异常处理.md)
+  - [07-Java集合](ch1/07-Java集合.md)
+  - [08-泛型](ch1/08-泛型.md)
+  - [09-枚举&注解](ch1/09-枚举&注解.md)
+  - [10-IO流](ch1/10-IO流.md)
+  - [11-多线程](ch1/11-多线程.md)
+  - [12-Java常用类](ch1/12-Java常用类.md)
+  - [13-Java反射机制](ch1/13-Java反射机制.md)
+  - [14-网络编程](ch1/14-网络编程.md)
+  - [15-Java8学习](ch1/15-Java8学习.md)
+  - [面经(待更…)]()
+- [Part Ⅱ：JavaWeb篇](ch2/README.md)
+  - [01-HTML](ch2/01-HTML.md)
+  - [02-CSS](ch2/02-CSS.md)
+  - [03-JavaScript](ch2/03-JavaScript.md)
+  - [04-JQuery](ch2/04-JQuery.md)
+  - [05-数据库](ch2/05-数据库.md)
+  - [06-JDBC&装饰者模式](ch2/06-JDBC&装饰者模式.md)
+  - [07-XML&Tomcat&反射](ch2/07-XML&Tomcat&反射.md)
+  - [08-Servlet&HTTP](ch2/08-Servlet&HTTP.md)
+  - [09-Cookie&Session](ch2/09-Cookie&Session.md)
+  - [10-JSP&EL&JSTL](ch2/10-JSP&EL&JSTL.md)
+  - [11-事务&MVC&反射](ch2/11-事务&MVC&反射.md)
+  - [12-Ajax&Json&jQuery](ch2/12-Ajax&Json&jQuery.md)
+  - [13-Listener&Filter](ch2/13-Listener&Filter.md)
+  - [14-注解&类加载器&动态代理](ch2/14-注解&类加载器&动态代理.md)
+  - [关于Eclipse配置及项目发布问题](ch2/关于Eclipse配置及项目发布问题.md)
+- [Part Ⅲ：框架篇](ch3/README.md)
+  - [Spring 笔记1：IOC及XML方式&依赖注入](ch3/01-Spring 笔记1：IOC及XML方式&依赖注入.md)
+  - [Spring 笔记2：IOC注解方式&AOP](ch3/02-Spring 笔记2：IOC注解方式&AOP.md)
+  - [Spring 笔记3：JDBC模板&事务管理](ch3/03-Spring 笔记3：JDBC模板&事务管理.md)
+  - [Spring 笔记4：SSH三大框架整合，未完...](ch3/04-Spring 笔记4：SSH三大框架整合，未完....md)
+  - [MyBatis 笔记1：开发入门](ch3/05-MyBatis 笔记1：开发入门.md)
+  - [MyBatis 笔记2：映射&动态sql&关联查询&整合Spring](ch3/06-MyBatis 笔记2：映射&动态sql&关联查询&整合Spring.md)
+  - [MyBatis 笔记3：逆向工程](ch3/07-Mybatis 笔记3：逆向工程.md)
+  - [SpringMVC 笔记1：整合Mybatis&参数绑定](ch3/08-SpringMVC 笔记1：整合Mybatis&参数绑定.md)
+  - [SpringMVC 笔记2：高级参数绑定&Restful&拦截器](ch3/09-SpringMVC 笔记2：高级参数绑定&Restful&拦截器.md)
+  - [其他(待更…)]()
+- [Part Ⅳ：项目实战](ch4/README.md)
+- [Part Ⅴ：微服务等](ch5/README.md)
+- [Part VI：Java虚拟机/并发等](ch6/README.md)
+- [Linux&Git学习](Linux-Git/README.md)
+  - [Linux 笔记1：常用命令&Vim编辑器&用户和组&权限](Linux-Git/01-Linux 笔记1：常用命令&Vim编辑器&用户和组&权限.md)
+  - [Linux 笔记2：软件安装方式总结](Linux-Git/02-Linux 笔记2：软件安装方式总结.md)
+  - [Linux 笔记3：虚拟机安装Ubuntu&文件传输&远程连接和控制](Linux-Git/03-Linux 笔记3：虚拟机安装Ubuntu&文件传输&远程连接和控制.md)
+  - [Git 学习](Linux-Git/04-Git学习.md)
+  - [GitHub 使用](Linux-Git/05-GitHub使用.md)
+
+(待更...
+
+
+
+
+## 资料
+
+(1) Java基础篇
 
 - 《尚硅谷官网视频 - 基础阶段 》链接: https://pan.baidu.com/s/1hBjlBCw1FyygspMN-OYcyA 提取码: y3v4
 
-(2) Part Ⅱ：JavaWeb篇。学习于：
+(2) JavaWeb篇
 
 - 《黑马程序员_30天轻松掌握JavaWeb视频》链接: https://pan.baidu.com/s/1PpzeSK4qffHODZHadHkqyw 提取码: pfro
 
-(3) Part Ⅲ：框架篇。学习于：
+(3) 框架篇
 
 - 《2017黑马java基础班+就业班》链接: https://pan.baidu.com/s/1-HNGnhdkzxLXhsKiIXHN8g 提取码: 14d
 
@@ -34,9 +96,7 @@
 
 
 
-:point_right: ​在线阅读：[传送门](https://javaee.strivebo.com)
-
-
+:point_right: 在线阅读：[传送门](https://javaee.strivebo.com)
 
 ---
 
