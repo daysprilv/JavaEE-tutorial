@@ -1,6 +1,6 @@
 {
-	"title": "JAVA后端升级打怪",
-    "description": "JAVA后端技术栈学习记录",
+	"title": "JAVA后端打怪升级",
+    "description": "JAVA后端技术栈学习和记录。感兴趣全栈、高并发高可用、架构等。",
     "author": "Jaybo",
     "language": "zh-hans",
     "gitbook": "3.2.2",
@@ -9,7 +9,7 @@
     },
 	"links": {
         "sidebar": {
-            
+			
         }
     },
 	"styles": {
