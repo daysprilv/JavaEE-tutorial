@@ -9,6 +9,7 @@
 关于 Java 后端开发学习路线以及如何学？参考网上：
 
 - [Java 后端自学之路 - 后端 - 掘金](https://juejin.im/entry/5a7a9a13f265da4e865a578c)
+- [Java 学习路线以及各阶段学习书籍，博文，视频的分享](https://www.cnblogs.com/dantefung/p/4883741.html)
 - [Java 学习路线之四个阶段 - SegmentFault 思否](https://segmentfault.com/a/1190000014933213)
 - [Java学习路线图——献给Java初学者_慕课手记](https://www.imooc.com/article/21820)
 - [Java后端工程师学习大纲 - 后端技术杂谈](http://www.rowkey.me/blog/2016/06/27/java-backend-study/?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
@@ -22,15 +23,16 @@
 
 - 《尚硅谷官网视频 - 基础阶段 》链接: https://pan.baidu.com/s/1hBjlBCw1FyygspMN-OYcyA 提取码: y3v4
 
-(2) JavaWeb篇
+(2) JavaWeb篇 
 
 - 《黑马程序员_30天轻松掌握JavaWeb视频》链接: https://pan.baidu.com/s/1PpzeSK4qffHODZHadHkqyw 提取码: pfro
+- [JavaWeb学习总结 - 标签 - 孤傲苍狼 - 博客园](<https://www.cnblogs.com/xdp-gacl/tag/JavaWeb%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/default.html?page=3>) 
 
 (3) 框架篇
 
 - 《2017黑马java基础班+就业班》链接: https://pan.baidu.com/s/1-HNGnhdkzxLXhsKiIXHN8g 提取码: 14d
 
-待更新……
+(待更...)
 
 
 

@@ -9,6 +9,7 @@
 关于 Java 后端开发学习路线以及如何学？参考网上：
 
 - [Java 后端自学之路 - 后端 - 掘金](https://juejin.im/entry/5a7a9a13f265da4e865a578c)
+- [Java 学习路线以及各阶段学习书籍，博文，视频的分享](https://www.cnblogs.com/dantefung/p/4883741.html)
 - [Java 学习路线之四个阶段 - SegmentFault 思否](https://segmentfault.com/a/1190000014933213)
 - [Java学习路线图——献给Java初学者_慕课手记](https://www.imooc.com/article/21820)
 - [Java后端工程师学习大纲 - 后端技术杂谈](http://www.rowkey.me/blog/2016/06/27/java-backend-study/?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
@@ -35,6 +36,8 @@
   - [13-Java反射机制](ch1/13-Java反射机制.md)
   - [14-网络编程](ch1/14-网络编程.md)
   - [15-Java8学习](ch1/15-Java8学习.md)
+  - [Win7下Java环境变量配置](./others/Win7下Java环境变量配置.md)
+  - [为什么一个Java源文件只能有一个public类？](./others/为什么一个Java源文件只能有一个public类？.md)
   - 面经(待更…)
 
 
@@ -66,6 +69,10 @@
   - [MyBatis 笔记3：逆向工程](ch3/07-Mybatis笔记3：逆向工程.md)
   - [SpringMVC 笔记1：整合Mybatis&参数绑定](ch3/08-SpringMVC笔记1：整合Mybatis&参数绑定.md)
   - [SpringMVC 笔记2：高级参数绑定&Restful&拦截器](ch3/09-SpringMVC笔记2：高级参数绑定&Restful&拦截器.md)
+  - [Maven笔记1：入门演示](./ch3/10-Maven笔记1：入门演示.md)
+  - [Maven笔记2：依赖管理&项目拆分&私服搭建](./ch3/11-Maven笔记2：依赖管理&项目拆分&私服搭建.md)
+  - [Nginx笔记：反向代理&搭建集群](./ch3/12-Nginx笔记：反向代理&搭建集群.md)
+  - [Redis笔记：Jedis&数据类型&持久化&主从复制](./ch3/13-Redis笔记：Jedis&数据类型&持久化&主从复制.md)
   - 其他(待更…)
 
 
@@ -89,11 +96,9 @@
 - **工具篇**
   - [Eclipse 教程](./tools/Eclipse.md)
   - [IDEA 教程](./tools/IDEA.md)
-  - [与 Java 有关的工具和插件汇集](
+  - [与 Java 有关的工具和插件汇集](./tools/与Java有关的工具和插件.md)
 
-(待更...
-
-
+(待更...)
 
 ## 资料
 
@@ -101,19 +106,24 @@
 
 - 《尚硅谷官网视频 - 基础阶段 》链接: https://pan.baidu.com/s/1hBjlBCw1FyygspMN-OYcyA 提取码: y3v4
 
-(2) JavaWeb篇
+(2) JavaWeb篇 
 
 - 《黑马程序员_30天轻松掌握JavaWeb视频》链接: https://pan.baidu.com/s/1PpzeSK4qffHODZHadHkqyw 提取码: pfro
+- [JavaWeb学习总结 - 标签 - 孤傲苍狼 - 博客园](<https://www.cnblogs.com/xdp-gacl/tag/JavaWeb%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/default.html?page=3>) 
 
 (3) 框架篇
 
 - 《2017黑马java基础班+就业班》链接: https://pan.baidu.com/s/1-HNGnhdkzxLXhsKiIXHN8g 提取码: 14d
 
-待更新……
+
+
+(待更...)
 
 
 
 :point_right: 在线阅读：[传送门](https://javaee.strivebo.com)
+
+
 
 ---
 
