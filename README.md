@@ -6,8 +6,6 @@
 
 另外，目前只学了 Java 基础、JavaWeb、SSM 框架这些，很多内容还等着学习，待日后有时间我会去学习进而补充过来的。
 
-另外，目前只学了 Java 基础、JavaWeb、SSM 框架这些，很多内容还等着学习，待日后有时间我会去学习进而补充过来的。
-
 关于 Java 后端开发学习路线以及如何学？参考网上：
 
 - [Java 后端自学之路 - 后端 - 掘金](https://juejin.im/entry/5a7a9a13f265da4e865a578c)
@@ -37,7 +35,9 @@
   - [13-Java反射机制](ch1/13-Java反射机制.md)
   - [14-网络编程](ch1/14-网络编程.md)
   - [15-Java8学习](ch1/15-Java8学习.md)
-  - [面经(待更…)]()
+  - 面经(待更…)
+
+
 - **Part Ⅱ：JavaWeb篇**
   - [01-HTML](ch2/01-HTML.md)
   - [02-CSS](ch2/02-CSS.md)
@@ -54,6 +54,8 @@
   - [13-Listener&Filter](ch2/13-Listener&Filter.md)
   - [14-注解&类加载器&动态代理](ch2/14-注解&类加载器&动态代理.md)
   - [关于Eclipse配置及项目发布问题](ch2/关于Eclipse配置及项目发布问题.md)
+
+
 - **Part Ⅲ：框架篇**
   - [Spring 笔记1：IOC及XML方式&依赖注入](ch3/01-Spring笔记1：IOC及XML方式&依赖注入.md)
   - [Spring 笔记2：IOC注解方式&AOP](ch3/02-Spring笔记2：IOC注解方式&AOP.md)
@@ -65,23 +67,31 @@
   - [SpringMVC 笔记1：整合Mybatis&参数绑定](ch3/08-SpringMVC笔记1：整合Mybatis&参数绑定.md)
   - [SpringMVC 笔记2：高级参数绑定&Restful&拦截器](ch3/09-SpringMVC笔记2：高级参数绑定&Restful&拦截器.md)
   - 其他(待更…)
+
+
 - **Part Ⅳ：项目实战**
+
+
 - **Part Ⅴ：微服务等**
+
+
 - **Part VI：Java虚拟机/并发等**
   - [Java JVM 中栈，堆，方法区详解](./ch6/Java中栈，堆，方法区详解.md)
+
 - **Linux&Git学习**
   - [Linux 笔记1：常用命令&Vim编辑器&用户和组&权限](Linux-Git/01-Linux笔记1：常用命令&Vim编辑器&用户和组&权限.md)
   - [Linux 笔记2：软件安装方式总结](Linux-Git/02-Linux笔记2：软件安装方式总结.md)
   - [Linux 笔记3：虚拟机安装Ubuntu&文件传输&远程连接和控制](Linux-Git/03-Linux笔记3：虚拟机安装Ubuntu&文件传输&远程连接和控制.md)
   - [Git 学习](Linux-Git/04-Git学习.md)
   - [GitHub 使用](Linux-Git/05-GitHub使用.md)
+
+
 - **工具篇**
-  - [eclipse 教程](./tools/eclipse.md)
-  - [IDEA 教程](./tools/idea.md)
-  - [与 Java 有关的工具和插件汇集](./tools/与Java有关的工具和插件.md)
+  - [Eclipse 教程](./tools/Eclipse.md)
+  - [IDEA 教程](./tools/IDEA.md)
+  - [与 Java 有关的工具和插件汇集](
 
 (待更...
-
 
 
 
