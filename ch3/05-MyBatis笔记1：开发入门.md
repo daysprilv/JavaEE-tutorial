@@ -230,9 +230,9 @@ mapper.xml 文件即 sql 映射文件，文件中配置了操作数据库的 sql
 
 补充：
 
-> - Hibernate 是个 ORM 框架，但 Mybatis 不是，没有真正意义上的映射关系，相比 Mybatis 简单多，它就是对 jdbc 轻量级的封装。相关资料：
+> - Hibernate 是个 ORM 框架，但 Mybatis 不是，没有真正意义上的映射关系，相比 Hibernate 简单多，它就是对 jdbc 轻量级的封装。相关资料：
 >   - [ORM框架简介](https://blog.csdn.net/papima/article/details/78219000)
->   - 知乎：[MyBatis不是完整的ORM框架？](https://www.zhihu.com/question/39454008)
+>   - [MyBatis不是完整的ORM框架？ - 知乎](https://www.zhihu.com/question/39454008)
 > - 在 Hibernate 都不用写 SQL 语句，但在 Mybatis 你需要写 SQL 语句，这样有个好处，假如公司有数据库高手，那么你就可以直接发送 mapper.xml 文件叫 TA 帮忙修改或优化 SQL 语句，再发给你来。
 
 ### 2.3 Mybatis 的入门程序
@@ -826,11 +826,11 @@ public class UserMapperTest {
 
 补充：
 
-☛ selectOne和selectList
+selectOne和selectList
 
 > 动态代理对象调用 `sqlSession.selectOne()` 和 `sqlSession.selectList()` 是根据 mapper 接口方法的返回值决定，如果返回 list 则调用 selectList 方法，如果返回单个对象则调用 selectOne 方法。
 
-☛ namespace
+namespace
 
 > mybatis 官方推荐使用 mapper 代理方法开发 mapper 接口，程序员不用编写 mapper 接口实现类，使用 mapper 代理方法时，输入参数可以使用 pojo 包装对象或 map 对象，保证 dao 的通用性。
 

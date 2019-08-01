@@ -18,7 +18,7 @@
 
 ## 一、Spring框架的IOC基于注解的方式
 
-> 传统的 SSH（Structs2、Spring、Hibernate）架构的项目基本都是使用的配置文件方式，很少用注解的方式，但其实 Struts2 有注解，Hibernate 也有注解。如果是 SSM（SpringMVC、Spring、Mybatis）这套架构的项目有可能使用到注解方式，所以重点会在这套架构学习中讲解注解方式，但 SSH 该架构也是用到了 Spring，所以还是会先讲解注解方式。
+> 传统的 SSH（Structs2、Spring、Hibernate）架构的项目基本都是使用的配置文件方式，很少用注解的方式，但其实 Struts2 有注解，Hibernate 也有注解。如果是 SSM（SpringMVC、Spring、MyBatis）这套架构的项目有可能使用到注解方式，所以重点会在这套架构学习中讲解注解方式，但 SSH 该架构也是用到了 Spring，所以还是会先讲解注解方式。
 
 先想一想注解出现的目的是干嘛呢？其实注解最主要一个目的就是要替代传统 XML 文件方式，用注解会变得更简单，因为传统 XML 文件需要写很多很多配置，如果多了会变得很臃肿。
 
@@ -849,8 +849,4 @@ applicationContext.xml：
 ```
 
 
-
----
-
-参考：*《2017黑马java基础班+就业班》视频*   
 

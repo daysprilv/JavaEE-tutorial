@@ -279,7 +279,7 @@ EFI VMware Virtual SATA CDROM Drive (1.0) … unsuccessful.
 
 即可解决该问题。我猜测是因为在开始安装 macOS 系统，使用了 darwin.iso 文件缘故。
 
-## 二、SSH远程连接ubuntu
+## 二、SSH远程连接Ubuntu
 
 VMware 虚拟机下安装完 Ubuntu 系统就可以开始使用了！
 
@@ -287,7 +287,7 @@ VMware 虚拟机下安装完 Ubuntu 系统就可以开始使用了！
 
 这里还有一篇写的很清楚，推荐阅读：[最佳实践：使用SSH连接Linux服务器](https://www.jianshu.com/p/59c4fc2684be)。
 
-简单说，SSH（Secure Shell，安全外壳协议） 是一种网络协议，用于计算机之间的加密登录。存在多种实现，既有商业实现，也有开源实现。建议好好理解下 SSH 协议原理，HTTPS 协议也有相关知识点，改天有时间我再好好写篇关于 HTTPS 的认识吧。
+简单说，SSH（Secure Shell，安全外壳协议） 是一种网络协议，用于计算机之间的加密登录。存在多种实现，既有商业实现，也有开源实现。建议好好理解下 SSH 协议原理，HTTPS 协议也有相关知识点，日后有时间我来写篇关于 HTTPS 的认识吧。
 
 > 注：使用 Git 在 GitHub 进行多人合作代码管理等操作之前，一般也会配置 SSH 公钥私钥，这样每次提交代码就不用输入账户和密码。
 
@@ -520,6 +520,32 @@ Permission denied (publickey).
 解决：可能是你的机器重启但是没开 ssh 服务，重启 ssh 服务即可：`/etc/init.d/ssh restart`。
 
 参考：[linux和windows、linux和linux传文件](https://blog.csdn.net/u014380165/article/details/78210260)
+
+
+
+### 补充：SSH远程连接CentOS
+
+在虚拟机（Vmware Workstation）下，安装了 CentOS，现在想通过 SSH 工具连接虚拟机中的 CentOS7。
+
+1. 首先，要确保 CentOS 安装了  `openssh-server`，在终端中输入：`yum list installed | grep openssh-server`
+
+   ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190730110741.png)
+
+   此处显示已经安装了  `openssh-server`，如果没任何输出显示表示没有安装  `openssh-server`，通过输入  `yum install openssh-server` 来进行安装 `openssh-server`。
+
+2. 找到了  **/etc/ssh/**  目录下的 sshd 服务配置文件 sshd_config，用 vim 编辑器打开，将文件中，关于监听端口、监听地址前的 # 号去除，然后开启允许远程登录，最后，开启使用用户名密码来作为连接验证，保存文件，退出。
+   
+3. 开启  sshd  服务，输入 `sudo service sshd start`。检查  sshd  服务是否已经开启，输入 `ps -e | grep sshd`。或者输入 `netstat -an | grep 22`  检查  22 号端口是否开启监听。
+
+这里提下查看 CentOS 的 IP 地址的问题：
+
+我们输入 ip 查询命名 ip addr  也可以输入 ifconfig 查看 ip，但此命令会出现3个条目，centos 的 ip 地址是 ens33 条目中的 inet 值。
+
+发现 ens33 没有 inet 这个属性，那么就没法通过 ip 地址连接虚拟机。
+
+接着来查看 ens33 网卡的配置：`vi /etc/sysconfig/network-scripts/ifcfg-ens33`，注意 vi 后面加空格。从配置清单中可以发现 CentOS 7 默认是不启动网卡的（ONBOOT=no），把这一项改为 YES（ONBOOT=yes），然后按 Esc 退出  再出入命令 :wq  再按 Enter 即可。然后重启网络服务：`sudo service network restart`。
+
+然后再输入  ip addr 命令，可以看到 inet 属性显示了虚拟机 CentOS 的 ip 地址。
 
 
 

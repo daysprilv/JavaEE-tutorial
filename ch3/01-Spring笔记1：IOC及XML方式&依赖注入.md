@@ -806,7 +806,7 @@ public class CustomerServiceImpl implements CustomerService {
     
 	public void save() {
 		System.out.println("业务层：保存客户...");
-		cust omerDao.save();
+		customerDao.save();
 	}
 }
 ```
@@ -944,7 +944,3 @@ public String save(){
 ```
 
 
-
----
-
-参考：*《2017黑马java基础班+就业班》视频*    

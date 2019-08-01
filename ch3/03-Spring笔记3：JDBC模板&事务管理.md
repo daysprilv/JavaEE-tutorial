@@ -913,6 +913,5 @@ applicationContext.xml：
 
 ---
 
-参考：*《2017黑马java基础班+就业班》视频*    
+相关阅读：[Spring 教程 - 极客学院](http://wiki.jikexueyuan.com/project/spring/)
 
-更多学习：（极客学院）[Spring 教程](http://wiki.jikexueyuan.com/project/spring/)

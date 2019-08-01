@@ -385,7 +385,7 @@ xml 和 schema 的关联，格式：
 | webspere | IBM | 大型的收费的支持javaee所有规范的服务器 |
 | tomcat | apache组织 | 中小型的免费的支持servlet和jsp规范的服务器 |
 
-> *关于 JavaEE 规范了解下：[【Java】javaEE的13个技术规范](https://blog.csdn.net/zh15732621679/article/details/53966404)*
+> 关于 JavaEE 规范了解下：[【Java】javaEE的13个技术规范](https://blog.csdn.net/zh15732621679/article/details/53966404)
 
 tomcat 下载：
 
