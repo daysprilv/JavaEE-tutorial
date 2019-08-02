@@ -69,10 +69,10 @@
   - [MyBatis 笔记3：逆向工程](ch3/07-Mybatis笔记3：逆向工程.md)
   - [SpringMVC 笔记1：整合Mybatis&参数绑定](ch3/08-SpringMVC笔记1：整合Mybatis&参数绑定.md)
   - [SpringMVC 笔记2：高级参数绑定&Restful&拦截器](ch3/09-SpringMVC笔记2：高级参数绑定&Restful&拦截器.md)
-  - [Maven笔记1：入门演示](./ch3/10-Maven笔记1：入门演示.md)
-  - [Maven笔记2：依赖管理&项目拆分&私服搭建](./ch3/11-Maven笔记2：依赖管理&项目拆分&私服搭建.md)
-  - [Nginx笔记：反向代理&搭建集群](./ch3/12-Nginx笔记：反向代理&搭建集群.md)
-  - [Redis笔记：Jedis&数据类型&持久化&主从复制](./ch3/13-Redis笔记：Jedis&数据类型&持久化&主从复制.md)
+  - [Maven 笔记1：入门演示](./ch3/10-Maven笔记1：入门演示.md)
+  - [Maven 笔记2：依赖管理&项目拆分&私服搭建](./ch3/11-Maven笔记2：依赖管理&项目拆分&私服搭建.md)
+  - [Nginx 笔记：反向代理&项目发布&搭建集群](./ch3/12-Nginx笔记：反向代理&项目发布&搭建集群.md)
+  - [Redis 笔记：Jedis&数据类型&持久化&主从复制](./ch3/13-Redis笔记：Jedis&数据类型&持久化&主从复制.md)
   - 其他(待更…)
 
 
@@ -80,6 +80,9 @@
 
 
 - **Part Ⅴ：微服务等**
+
+  - Docker 容器技术
+  - Spring Boot 学习
 
 
 - **Part VI：Java虚拟机/并发等**
